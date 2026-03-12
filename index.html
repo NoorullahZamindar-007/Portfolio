@@ -2,330 +2,1244 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Noorullah Zamindar - Portfolio</title>
-  <!-- Font Awesome (for icons) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Noorullah Zamindar | AI Engineer & Data Scientist</title>
+  <meta
+    name="description"
+    content="Noorullah Zamindar is an AI Engineer and Data Scientist specializing in AI agents, workflow automation, machine learning, dashboards, and technical training."
+  />
+  <meta property="og:title" content="Noorullah Zamindar | AI Engineer & Data Scientist" />
+  <meta
+    property="og:description"
+    content="Portfolio of Noorullah Zamindar featuring AI projects, automation systems, machine learning work, training experience, and client delivery proof."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://noorullahzamindar-007.github.io/Portfolio/" />
+  <meta property="og:image" content="https://noorullahzamindar-007.github.io/Portfolio/images/profile.png" />
+  <link rel="icon" type="image/png" href="images/profile.png" />
   <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-  integrity="sha512-9v6+9... (truncated)
-  crossorigin="anonymous"
-  referrerpolicy="no-referrer"/>
-    <!-- CSS -->
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    referrerpolicy="no-referrer"
+  />
   <link rel="stylesheet" href="styles.css" />
   <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
   <script src="https://unpkg.com/scrollreveal"></script>
-  
 </head>
 <body>
-  
-  <!-- Navigation Bar -->
+  <div class="page-loader" id="page-loader" aria-hidden="true">
+    <div class="loader-mark"></div>
+    <p>Loading portfolio...</p>
+  </div>
+  <div class="scroll-progress" id="scroll-progress"></div>
   <header>
     <a href="#" class="logo">Portfolio</a>
-    <i class="fas fa-bars" id="menu-icon"></i>
+    <div class="header-actions">
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle color theme">
+        <i class="fa-solid fa-sun"></i>
+      </button>
+      <i class="fas fa-bars" id="menu-icon"></i>
+    </div>
     <nav class="navbar">
-        <a href="#home" >Home</a>
-        <a href="#about"  >About Me</a>
-        <a href="#experience">Experience</a>
-        <a href="#education">Education</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#certifications">Certifications</a>
-      
+      <a href="#home">Home</a>
+      <a href="#about">About Me</a>
+      <a href="#specializations">Specialize</a>
+      <a href="#services">Services</a>
+      <a href="#why-me">Why Me</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#proof">Proof</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <!-- Hero Section -->
   <section id="home" class="hero" data-animate="scale-up">
     <div class="hero-content left">
       <h3>Hi,</h3>
-      <h1> I'm <span class="highlight">Noorullah Zamindar</span></h1>
-      <!-- Rotating Role Text -->
-      <h3>I'm a <span class="highlight" id="rotating-role">Data Scientist</span></h3>
+      <h1>I'm <span class="highlight">Noorullah Zamindar</span></h1>
+      <h3>I'm an <span class="highlight" id="rotating-role">AI Engineer</span></h3>
+      <div class="availability-badge">Available for freelance, remote roles, and AI training projects</div>
       <p>
-        Seeking Full-Time Opportunities in the Data Science and AI Domain.<br>
-        Passionate about AI, Data Science, and Machine Learning. With an Bachelor's in Computer Science<br> 
-        from Rana University (3.9 GPA), I have experience as an AI & Data Science Freelancing Platforms  <br>
-        and as an ML Engineer at Rana University. Proficient in Python, SQL, Power BI,<br> Machine Learning,
-         NLP, Big Data, and Cloud platforms (AWS, GCP, Azure).
+        AI Engineer and Data Scientist with 5+ years of experience building AI agents,
+        predictive models, automation workflows, and practical training systems for real-world use.
       </p>
+      <div class="hero-actions">
+        <a href="#projects" class="hero-button primary">View Projects</a>
+        <a href="#contact" class="hero-button secondary">Contact Me</a>
+      </div>
+      <div class="hero-meta">
+        <span>Ahmad Shah Baba Mina, Saeed Jamaludin Town</span>
+        <span><a href="mailto:noorullahzamindar9@gmail.com">noorullahzamindar9@gmail.com</a></span>
+        <span><a href="tel:+93764835812">+93 764 835 812</a></span>
+        <span><a href="tel:+93797529779">+93 797 529 779</a></span>
+        <span><a href="https://noorullahzamindar-007.github.io/Portfolio/" target="_blank">Live Portfolio</a></span>
+      </div>
       <div class="social-links">
-        <a href="https://github.com/NoorullahZamindar-007" target="_blank">
+        <a href="https://github.com/NoorullahZamindar-007" target="_blank" aria-label="GitHub">
           <i class="fab fa-github"></i>
         </a>
-        <a href="https://www.linkedin.com/in/noorullah-zamindar-4975a328a/" target="_blank">
+        <a href="https://www.linkedin.com/in/noorullah-zamindar-4975a328a/" target="_blank" aria-label="LinkedIn">
           <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="mailto:noorullahzamindar9@gmail.com" aria-label="Email">
+          <i class="fa-solid fa-envelope"></i>
         </a>
       </div>
     </div>
 
-    <!-- Hero Image with Animated Border -->
     <div class="hero-image right">
       <div class="animated-border"></div>
-      <img src="images/profile.png" alt="Noorullah Zamindar">
+      <img src="images/profile.png" alt="Noorullah Zamindar" />
     </div>
   </section>
 
-  <!-- About Me Section -->
+  <section id="specializations" class="specializations" data-animate="fade-up">
+    <h2 class="section-title">What I Specialize In</h2>
+    <div class="specialization-grid">
+      <article class="specialization-card">
+        <i class="fa-solid fa-microchip"></i>
+        <h3>AI Agents</h3>
+        <p>Designing AI-powered assistants that read, reason, respond, and automate high-value workflows.</p>
+      </article>
+      <article class="specialization-card">
+        <i class="fa-solid fa-diagram-project"></i>
+        <h3>Workflow Automation</h3>
+        <p>Connecting tools, APIs, CRMs, email, and messaging platforms into scalable automation systems.</p>
+      </article>
+      <article class="specialization-card">
+        <i class="fa-solid fa-chart-line"></i>
+        <h3>Applied Machine Learning</h3>
+        <p>Building predictive models, OCR systems, analytics dashboards, and practical AI solutions for clients and training.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="services" class="services" data-animate="fade-up">
+    <h2 class="section-title">Services</h2>
+    <div class="specialization-grid">
+      <article class="specialization-card">
+        <i class="fa-solid fa-robot"></i>
+        <h3>AI Agent Development</h3>
+        <p>Design and implementation of AI-powered assistants for email, research, support, and business workflows.</p>
+      </article>
+      <article class="specialization-card">
+        <i class="fa-solid fa-gears"></i>
+        <h3>Workflow Automation</h3>
+        <p>Automation systems using APIs, CRM tools, email flows, Zapier, Make, and n8n for operational efficiency.</p>
+      </article>
+      <article class="specialization-card">
+        <i class="fa-solid fa-chart-pie"></i>
+        <h3>Data Analysis & Dashboards</h3>
+        <p>Analytics pipelines, business reporting, dashboard development, and insight generation using Python and BI tools.</p>
+      </article>
+      <article class="specialization-card">
+        <i class="fa-solid fa-chalkboard-user"></i>
+        <h3>Training & Mentoring</h3>
+        <p>AI, Python, freelancing, and automation training for students, professionals, and institutions.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="why-me" class="specializations" data-animate="fade-up">
+    <h2 class="section-title">Why Work With Me</h2>
+    <div class="specialization-grid">
+      <article class="specialization-card">
+        <i class="fa-solid fa-screwdriver-wrench"></i>
+        <h3>Practical Solutions</h3>
+        <p>I focus on usable systems, not just ideas, with attention to delivery, utility, and business value.</p>
+      </article>
+      <article class="specialization-card">
+        <i class="fa-solid fa-graduation-cap"></i>
+        <h3>Teaching + Implementation</h3>
+        <p>I combine technical execution with training ability, which helps clients and learners understand what gets built.</p>
+      </article>
+      <article class="specialization-card">
+        <i class="fa-solid fa-globe"></i>
+        <h3>Remote Experience</h3>
+        <p>I have delivered work and collaboration across Afghanistan, the USA, Dubai, and international online platforms.</p>
+      </article>
+      <article class="specialization-card">
+        <i class="fa-solid fa-bolt"></i>
+        <h3>Fast Adaptation</h3>
+        <p>I adapt quickly to changing client needs, new tools, and cross-functional delivery environments.</p>
+      </article>
+    </div>
+  </section>
+
   <section id="about" class="about" data-animate="fade-right">
     <div class="container">
-      <!-- Left Side: Profile Picture -->
       <div class="about-image">
-        <img src="images/about2.jpg" alt="Noorullah Zamindar">
+        <img src="images/about2.jpg" alt="Noorullah Zamindar" />
       </div>
-      <!-- Right Side: About Text -->
       <div class="about-content">
         <h2>About <span class="highlight">Me</span></h2>
-        <h3><span class="highlight">Data</span> Scientist</h3>
+        <h3><span class="highlight">AI</span> Engineer & Trainer</h3>
         <p>
-          Greetings! I’m Noorullah Zamindar, a Master's graduate in Computer Science & AI. 
-          I have hands-on experience in AI, Big Data, and automation. I specialize in leveraging 
-          technologies like Python, Machine Learning, Power BI, and Cloud to transform data into actionable insights. 
-          I'm currently seeking full-time opportunities to apply my skills and contribute to impactful projects.
+          I work across AI engineering, data science, and automation training. My
+          background combines software engineering, machine learning, backend systems,
+          analytics, and freelancing mentorship. I have delivered training for UNDP,
+          managed business systems, taught university students, and built practical tools
+          including AI email agents, OCR document extractors, analytics dashboards, and
+          CRM automation workflows.
         </p>
+        <div class="about-highlights">
+          <div class="highlight-card">
+            <h4>Core Focus</h4>
+            <p>AI agents, predictive models, analytics pipelines, workflow automation, and client delivery systems.</p>
+          </div>
+          <div class="highlight-card">
+            <h4>Book Publication</h4>
+            <p><strong>Human and Machine</strong> explores AI evolution, ethics, and human-machine collaboration.</p>
+          </div>
+          <div class="highlight-card">
+            <h4>Languages</h4>
+            <p>Pashto (Native), Dari (Fluent), English (Fluent), Urdu (Fluent).</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Experience Section -->
-<section id="experience" class="experience" data-animate="fade-left">
+  <section id="experience" class="experience" data-animate="fade-left">
     <h2 class="section-title">Experience</h2>
-  
+    <p class="experience-intro">
+      Professional work across AI training, analytics systems, workflow automation, teaching, and client delivery. Each role combines technical execution with practical business impact.
+    </p>
     <div class="timeline">
-  
-      <!-- Freelancing AI Engineer  -->
       <div class="timeline-item">
-        <span class="timeline-date">Aug 2020 – Present</span>
-        <h3>AI Engineer And Data Scientist – <span class="company">Freelancing</span></h3>
+        <span class="timeline-date">Feb 2026 - Present</span>
+        <h3>Freelancing & AI Automation Trainer (Part-Time) - <span class="company">Independent</span></h3>
+        <div class="experience-meta">
+          <span>Training</span>
+          <span>Automation</span>
+          <span>Freelancing</span>
+        </div>
         <ul>
-          <li>Conducted data analysis and visualization projects using Python, Pandas, and Matplotlib. </li>
-          <li>Developed machine learning models for prediction, classification, and clustering.</li>
-          <li>Provided consultation on AI and ML solutions for international clients. </li>
-          <li>Built data dashboards using Power BI and Tableau for client reports. </li>
-          <li>Assisted in data cleaning, feature engineering, and model optimization.</li>
+          <li>Conduct training on Fiverr, LinkedIn, Upwork, and remote work strategies for freelancers.</li>
+          <li>Teach AI-assisted workflows, productivity systems, and practical automation for digital services.</li>
+          <li>Guide trainees in building AI-powered services, portfolio projects, and client-ready automation systems.</li>
+          <li>Provide hands-on support for Zapier, Make, n8n, REST APIs, and automation integrations.</li>
+          <li>Trained 100+ learners and early-stage freelancers on remote work positioning and service packaging.</li>
         </ul>
+        <div class="experience-highlights">
+          <span>Remote Work Strategy</span>
+          <span>Portfolio Coaching</span>
+          <span>API Integrations</span>
+        </div>
       </div>
-  
-      <!-- TicLab Data Analyst Intern -->
+
       <div class="timeline-item">
-        <span class="timeline-date">May 2021 – Aug 2024</span>
-        <h3>System Manager  – <span class="company">AMHTC</span></h3>
+        <span class="timeline-date">Jul 2025 - Sep 2026</span>
+        <h3>AI / ML Trainer - <span class="company">UNDP</span></h3>
+        <div class="experience-meta">
+          <span>AI Training</span>
+          <span>Capacity Building</span>
+          <span>Python</span>
+        </div>
         <ul>
-          <li>Managed system input and output analysis to optimize operational efficiency.</li>
-          <li>Conducted market trend predictions using data-driven methodologies.</li>
-          <li>Developed forecasting models to enhance strategic decision-making. </li>
-          <li>Implemented data analytics solutions for business intelligence and process improvement. </li>
-          <li>Collaborated with stakeholders to streamline data collection, processing, and reporting. </li>
-          
+          <li>Delivered AI and ML training sessions and mentoring for capacity building in under-resourced communities.</li>
+          <li>Designed backend tools with Python, SQL, and automation frameworks to support learning platforms.</li>
+          <li>Built predictive models, analytics dashboards, and reproducible workflows for real-world demonstrations.</li>
+          <li>Maintained documentation, data integrity, and collaboration across multidisciplinary teams.</li>
+          <li>Built dashboards for decision support and helped learners move from theory into hands-on AI implementation.</li>
         </ul>
+        <div class="experience-highlights">
+          <span>Predictive Models</span>
+          <span>Dashboards</span>
+          <span>Learning Platforms</span>
+        </div>
       </div>
-  
-      <!--  AI and Data Science Lecturer and Trainer -->
+
       <div class="timeline-item">
-        <span class="timeline-date">May 2023 – Aug 2025</span>
-        <h3>AI and Data Science Lecturer and Trainer – <span class="company">GAK University</span></h3>
+        <span class="timeline-date">2021 - Feb 2025</span>
+        <h3>System Manager - <span class="company">AMHTC</span></h3>
+        <div class="experience-meta">
+          <span>Backend Systems</span>
+          <span>Analytics</span>
+          <span>Forecasting</span>
+        </div>
         <ul>
-          <li>Delivered lectures and conducted practical training in Artificial Intelligence, Python 
-            Programming, Information Technology, and Web Development. </li>
-          <li>Designed and facilitated hands-on learning experiences for undergraduate students and 
-            trainees. </li>
-          <li>Recognized by academic leadership for simplifying complex topics and making a strong impact 
-            on student learning.</li>
-            <li>Commended for professionalism, dedication, and a passion for education and technology. </li>
+          <li>Designed and managed backend systems for internal tools, reporting, and data processing.</li>
+          <li>Developed forecasting models and analytics pipelines to support strategic planning.</li>
+          <li>Integrated data collection systems with dashboards to improve visibility and performance.</li>
+          <li>Maintained scalability, data integrity, and security standards across departments.</li>
+          <li>Improved workflow speed and reporting visibility through better data flow and dashboard integration.</li>
         </ul>
+        <div class="experience-highlights">
+          <span>Business Intelligence</span>
+          <span>Data Integrity</span>
+          <span>Scalable Systems</span>
+        </div>
       </div>
-  
+
+      <div class="timeline-item">
+        <span class="timeline-date">2023 - Apr 2024</span>
+        <h3>Visiting Lecturer and Trainer - <span class="company">Ghazi Amanullah Khan University</span></h3>
+        <div class="experience-meta">
+          <span>Teaching</span>
+          <span>AI</span>
+          <span>Python</span>
+        </div>
+        <ul>
+          <li>Delivered lectures and practical training in AI, Python programming, information technology, and web development.</li>
+          <li>Designed hands-on learning experiences for undergraduate students and technical trainees.</li>
+          <li>Recognized for simplifying complex topics and creating strong student impact.</li>
+          <li>Helped students translate classroom concepts into practical technical projects and portfolio work.</li>
+        </ul>
+        <div class="experience-highlights">
+          <span>Hands-on Learning</span>
+          <span>Student Impact</span>
+          <span>Curriculum Delivery</span>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <span class="timeline-date">Feb 2020 - Mar 2021</span>
+        <h3>Field Engineer (Technical Assistant) - <span class="company">io Global Services Pvt. Ltd.</span></h3>
+        <div class="experience-meta">
+          <span>Infrastructure</span>
+          <span>Networking</span>
+          <span>Support</span>
+        </div>
+        <ul>
+          <li>Provided technical assistance and on-site support for hardware and networking systems.</li>
+          <li>Assisted with installation, maintenance, diagnostics, and field-level troubleshooting.</li>
+          <li>Supported operations teams in improving technical reliability and project delivery.</li>
+        </ul>
+        <div class="experience-highlights">
+          <span>Troubleshooting</span>
+          <span>Installation</span>
+          <span>Field Support</span>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <span class="timeline-date">2020 - Present</span>
+        <h3>Freelance / Remote Data Analyst & Machine Learning Engineer - <span class="company">International Clients</span></h3>
+        <div class="experience-meta">
+          <span>International Clients</span>
+          <span>ML Delivery</span>
+          <span>Dashboards</span>
+        </div>
+        <ul>
+          <li>Delivered analytics, machine learning, OCR, POS, dashboard, and automation solutions for remote clients.</li>
+          <li>Worked with clients in the USA and Dubai on educational AI tools and data-driven web applications.</li>
+          <li>Completed SQLite and PyQt6 POS development, client consulting, and project-based teaching engagements.</li>
+          <li>Delivered a 40+ day POS desktop project and multiple teaching-based freelance projects with strong client feedback.</li>
+        </ul>
+        <div class="experience-highlights">
+          <span>USA Client Delivery</span>
+          <span>Dubai Collaboration</span>
+          <span>POS Development</span>
+        </div>
+      </div>
     </div>
   </section>
-  
-<!-- Education Section (with Timeline Style) -->
-<section id="education" class="education" data-animate="fade-left">
-  <h2 class="section-title">Education</h2>
 
-  <div class="timeline">
+  <section id="education" class="education" data-animate="fade-left">
+    <h2 class="section-title">Education</h2>
+    <p class="education-intro">
+      Academic training in software engineering, business administration, language development, and practical technical communication.
+    </p>
+    <div class="timeline">
+      <div class="timeline-item">
+        <span class="timeline-date">Completed</span>
+        <h3>Bachelor in Computer Science (Software Engineering) - <span class="company">Rana University, Afghanistan</span></h3>
+        <div class="experience-meta">
+          <span>Software Engineering</span>
+          <span>Programming</span>
+          <span>AI Foundation</span>
+        </div>
+        <ul>
+          <li>Built a foundation in software engineering, programming, and intelligent systems.</li>
+          <li>Applied academic learning to AI, machine learning, and backend development projects.</li>
+        </ul>
+      </div>
 
-    <!-- Bchelors's Degree at Rana  University -->
-    <div class="timeline-item">
-      <span class="timeline-date">Sep 2021 – Sep 2025</span>
-      <h3>Bachelor's of Science in Computer Science and Software Engineering – <span class="company">Rana University</span></h3>
-      <ul>
-        <li>Graduated with a 3.9 GPA, specializing in Data Science and Artificial Intelligence.</li>
-        <li>Completed research projects focusing on Convolutional Neural Networks, NLP, and Deep Learning.</li>
-      </ul>
-    </div>
+      <div class="timeline-item">
+        <span class="timeline-date">In Progress</span>
+        <h3>Bachelor in Business Administration - <span class="company">Alagappa University, India (ICCR)</span></h3>
+        <div class="experience-meta">
+          <span>Management</span>
+          <span>Business Strategy</span>
+          <span>ICCR</span>
+        </div>
+        <ul>
+          <li>Expanding business and management knowledge alongside technical AI and data expertise.</li>
+          <li>Strengthening the ability to align analytics and automation with organizational goals.</li>
+        </ul>
+      </div>
 
-    <!-- Bachelor's Degree -->
-    <div class="timeline-item">
-      <span class="timeline-date">Sep 2024 – Sep 2026</span>
-      <h3>Bachelor's of Business and Administration – <span class="company">Allagappa University</span></h3>
-      <ul>
-        <li>Focused on Management and Big Data, mastering advanced analytics techniques.</li>
-        <li>Developed hands-on experience with Big Data tools like Hadoop, Spark, Kafka, and NiFi.</li>
-      </ul>
-    </div>
+      <div class="timeline-item">
+        <span class="timeline-date">Completed</span>
+        <h3>Diploma in English Language (DEL) - <span class="company">Storai Institute, Afghanistan</span></h3>
+        <div class="experience-meta">
+          <span>Communication</span>
+          <span>Academic English</span>
+        </div>
+        <ul>
+          <li>Developed professional communication skills for research, training, and international client work.</li>
+        </ul>
+      </div>
 
-  </div>
-</section>
-
-
-<!-- Skills Section -->
-<section id="skills" class="skills" data-animate="scale-up">
-  <h2 class="section-title">Skills & Proficiency</h2>
-
-  <div class="skills-container">
-
-    <!-- Coding & Visualization -->
-    <div class="skill-card">
-      <i class="fa-solid fa-code skill-icon"></i>
-      <h3>Coding & Visualization</h3>
-      <p>Python, R, Numpy, Pandas, SQL, Power BI, Java-Script, Matplotlib, Seaborn, Flutter</p>
-    </div>
-
-    <!-- Big Data & Machine Learning -->
-    <div class="skill-card">
-      <i class="fa-solid fa-robot skill-icon"></i>
-      <h3>Big Data & ML</h3>
-      <p>TensorFlow, PyTorch, Scikit-learn, Keras, LangChain, Hadoop, Spark, Kafka, Hive, NiFi</p>
-    </div>
-
-    <!-- Technical Expertise -->
-    <div class="skill-card">
-      <i class="fa-solid fa-brain skill-icon"></i>
-      <h3>Technical Expertise</h3>
-      <p>Recommendation Systems, Clustering, NLP, Regression, Prompt Engineering, Git</p>
-    </div>
-
-    <!-- DBMS & Cloud -->
-    <div class="skill-card">
-      <i class="fa-solid fa-cloud skill-icon"></i>
-      <h3>DBMS & Cloud</h3>
-      <p>PostgreSQL, MySQL, MongoDB, GCP, Azure, Docker, Oracle</p>
-    </div>
-
-    <!-- Interpersonal -->
-    <div class="skill-card">
-      <i class="fa-solid fa-users skill-icon"></i>
-      <h3>Interpersonal</h3>
-      <p>Cross-functional collaboration, Problem-solving, Communication, Project Management</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- Projects Section -->
-<section id="projects" class="projects" data-animate="scale-up">
-  <h2 class="section-title">Latest <span>Projects</span></h2>
-
-  <div class="projects-container">
-
-    <!-- Project 1: UIRAI-GPT-3.5-Turbo -->
-    <div class="project-card">
-      <img src="images\openai.jpeg" alt="UIRAI GPT-3.5">
-      <div class="project-info">
-        <h3>Emotion Recognition System</h3>
-        <p>Mental well-being assessment, Using Deeplearning(CNN) </p>
-        <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+      <div class="timeline-item">
+        <span class="timeline-date">Completed</span>
+        <h3>High School - <span class="company">Abdul Qayum Wardak High School, Afghanistan</span></h3>
+        <div class="experience-meta">
+          <span>Secondary Education</span>
+        </div>
+        <ul>
+          <li>Completed secondary education before entering university and technical practice.</li>
+        </ul>
       </div>
     </div>
+  </section>
 
-    <!-- Project 2: Text-Extractor-From-Image -->
-    <div class="project-card">
-      <img src="images/product.png" alt="Sales Analysis">
-      <div class="project-info">
-        <h3>Text-Extractor-From-Image</h3>
-        <p>Data cleaning, visualization, and (OCR) using Python.</p>
-        <a href="https://github.com/NoorullahZamindar-007/Text-Extractor-From-Image" target="_blank"><i class="fab fa-github"></i></a>
-      </div>
+  <section id="skills" class="skills" data-animate="scale-up">
+    <h2 class="section-title">Skills & Proficiency</h2>
+    <div class="skills-container">
+      <article class="skill-card active" data-skill-card>
+        <button class="skill-toggle" type="button" aria-expanded="true">
+          <div class="skill-heading">
+            <i class="fa-solid fa-code skill-icon"></i>
+            <div>
+              <h3>Programming & Data</h3>
+              <p class="skill-summary">Python-first analytics stack for dashboards, reporting, and data operations.</p>
+              <div class="skill-meta">
+                <span>Analytics</span>
+                <span>Reporting</span>
+                <span>Data Ops</span>
+              </div>
+              <div class="skill-preview-tags">
+                <span>Python</span>
+                <span>Pandas</span>
+                <span>SQL</span>
+                <span>Power BI</span>
+              </div>
+            </div>
+          </div>
+          <span class="skill-arrow"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="skill-details">
+          <div class="skill-details-inner">
+            <p class="skill-description">Used for data cleaning, analysis, visualization, database work, and business reporting across client and training projects.</p>
+            <div class="skill-tags">
+              <span>Python</span>
+              <span>Pandas</span>
+              <span>NumPy</span>
+              <span>SciPy</span>
+              <span>SQL</span>
+              <span>MySQL</span>
+              <span>SQL Server</span>
+              <span>Matplotlib</span>
+              <span>Power BI</span>
+              <span>Tableau</span>
+              <span>Data Cleaning</span>
+              <span>EDA</span>
+              <span>Reporting</span>
+              <span>Visualization</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="skill-card" data-skill-card>
+        <button class="skill-toggle" type="button" aria-expanded="false">
+          <div class="skill-heading">
+            <i class="fa-solid fa-robot skill-icon"></i>
+            <div>
+              <h3>Machine Learning & AI</h3>
+              <p class="skill-summary">Applied ML and AI for prediction, classification, OCR, and intelligent automation.</p>
+              <div class="skill-meta">
+                <span>Prediction</span>
+                <span>Vision</span>
+                <span>Intelligence</span>
+              </div>
+              <div class="skill-preview-tags">
+                <span>Scikit-learn</span>
+                <span>TensorFlow</span>
+                <span>OCR</span>
+                <span>Keras</span>
+              </div>
+            </div>
+          </div>
+          <span class="skill-arrow"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="skill-details">
+          <div class="skill-details-inner">
+            <p class="skill-description">Used to build predictive models, computer vision systems, OCR pipelines, and AI agents for real client work, educational demos, and automation-based solutions.</p>
+            <div class="skill-tags">
+              <span>Scikit-learn</span>
+              <span>TensorFlow</span>
+              <span>Keras</span>
+              <span>Predictive Modeling</span>
+              <span>Classification</span>
+              <span>Clustering</span>
+              <span>OCR</span>
+              <span>AI Agents</span>
+              <span>Computer Vision</span>
+              <span>Deep Learning</span>
+              <span>Model Evaluation</span>
+              <span>Feature Engineering</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="skill-card" data-skill-card>
+        <button class="skill-toggle" type="button" aria-expanded="false">
+          <div class="skill-heading">
+            <i class="fa-solid fa-brain skill-icon"></i>
+            <div>
+              <h3>Automation & Integration</h3>
+              <p class="skill-summary">Workflow automation for lead capture, client delivery, and business process improvement.</p>
+              <div class="skill-meta">
+                <span>Automation</span>
+                <span>Integration</span>
+                <span>CRM</span>
+              </div>
+              <div class="skill-preview-tags">
+                <span>Zapier</span>
+                <span>Make</span>
+                <span>n8n</span>
+                <span>APIs</span>
+              </div>
+            </div>
+          </div>
+          <span class="skill-arrow"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="skill-details">
+          <div class="skill-details-inner">
+            <p class="skill-description">Designed automation systems that connect forms, CRMs, email, APIs, and messaging platforms into reliable workflows for operations, customer support, and service delivery.</p>
+            <div class="skill-tags">
+              <span>Zapier</span>
+              <span>Make</span>
+              <span>n8n</span>
+              <span>REST APIs</span>
+              <span>Webhooks</span>
+              <span>JSON Workflows</span>
+              <span>CRM Automation</span>
+              <span>AI Operations</span>
+              <span>Email Automation</span>
+              <span>Lead Capture</span>
+              <span>Workflow Design</span>
+              <span>API Integration</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="skill-card" data-skill-card>
+        <button class="skill-toggle" type="button" aria-expanded="false">
+          <div class="skill-heading">
+            <i class="fa-solid fa-cloud skill-icon"></i>
+            <div>
+              <h3>Frameworks & Tools</h3>
+              <p class="skill-summary">Development environment for web apps, experiments, desktop tools, and portfolio delivery.</p>
+              <div class="skill-meta">
+                <span>Backend</span>
+                <span>Frontend</span>
+                <span>Desktop</span>
+              </div>
+              <div class="skill-preview-tags">
+                <span>Flask</span>
+                <span>Git</span>
+                <span>PyQt6</span>
+                <span>Tailwind</span>
+              </div>
+            </div>
+          </div>
+          <span class="skill-arrow"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="skill-details">
+          <div class="skill-details-inner">
+            <p class="skill-description">Used across Flask backends, desktop applications, notebook-based experiments, frontend pages, and collaborative development workflows for both freelance and training projects.</p>
+            <div class="skill-tags">
+              <span>Flask</span>
+              <span>Git</span>
+              <span>VS Code</span>
+              <span>Anaconda</span>
+              <span>Google Colab</span>
+              <span>PyQt6</span>
+              <span>HTML5</span>
+              <span>CSS3</span>
+              <span>Bootstrap</span>
+              <span>Tailwind CSS</span>
+              <span>Jupyter</span>
+              <span>Version Control</span>
+              <span>Desktop Apps</span>
+              <span>Responsive UI</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="skill-card" data-skill-card>
+        <button class="skill-toggle" type="button" aria-expanded="false">
+          <div class="skill-heading">
+            <i class="fa-solid fa-users skill-icon"></i>
+            <div>
+              <h3>Training & Delivery</h3>
+              <p class="skill-summary">Client communication, mentoring, documentation, and structured project execution.</p>
+              <div class="skill-meta">
+                <span>Mentoring</span>
+                <span>Delivery</span>
+                <span>Communication</span>
+              </div>
+              <div class="skill-preview-tags">
+                <span>Mentoring</span>
+                <span>Research</span>
+                <span>Delivery</span>
+                <span>Documentation</span>
+              </div>
+            </div>
+          </div>
+          <span class="skill-arrow"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="skill-details">
+          <div class="skill-details-inner">
+            <p class="skill-description">Focused on making complex technical topics practical and understandable while delivering projects on time and helping trainees and clients move from ideas to usable systems.</p>
+            <div class="skill-tags">
+              <span>Technical Mentoring</span>
+              <span>Research</span>
+              <span>Communication</span>
+              <span>Documentation</span>
+              <span>Freelancing Guidance</span>
+              <span>Deadline Delivery</span>
+              <span>Presentation Skills</span>
+              <span>Client Handling</span>
+              <span>Training Design</span>
+              <span>Project Coordination</span>
+            </div>
+          </div>
+        </div>
+      </article>
     </div>
+  </section>
 
-    <!-- Project 3: Face-Swaping-App -->
-    <div class="project-card">
-      <img src="images/lamma.jpg" alt="Llama-2 Chatbot">
-      <div class="project-info">
-        <h3>Face-Swaping-App</h3>
-        <p>face swapping application using Python, OpenCV, and Dlib. It detects facial landmarks</p>
-        <a href="https://github.com/NoorullahZamindar-007/Face-Swaping-App" target="_blank"><i class="fab fa-github"></i></a>
-      </div>
+  <section id="projects" class="projects" data-animate="scale-up">
+    <h2 class="section-title">Featured <span>Projects</span></h2>
+    <p class="projects-intro">
+      Selected AI, automation, analytics, and product-focused work. Click any project to open the full overview, technology stack, and delivery focus.
+    </p>
+    <div class="project-filters">
+      <button class="project-filter active" type="button" data-project-filter="all">All</button>
+      <button class="project-filter" type="button" data-project-filter="ai">AI</button>
+      <button class="project-filter" type="button" data-project-filter="automation">Automation</button>
+      <button class="project-filter" type="button" data-project-filter="data">Data</button>
+      <button class="project-filter" type="button" data-project-filter="web">Web</button>
+      <button class="project-filter" type="button" data-project-filter="training">Training</button>
     </div>
+    <div class="projects-container">
+      <article class="project-card active" data-project-card data-project-category="ai automation">
+        <button class="project-toggle" type="button" aria-expanded="true">
+          <div class="project-visual">
+            <img src="https://opengraph.githubassets.com/1/NoorullahZamindar-007/AI--Email---Agent" alt="AI Email Agent repository preview" />
+            <div class="project-glow"></div>
+          </div>
+          <div class="project-header">
+            <div class="project-title-wrap">
+              <span class="project-type">AI Agent</span>
+              <h3>AI Email Auto-Responder Agent</h3>
+              <p class="project-summary">Reads incoming emails, understands intent, and drafts intelligent replies automatically.</p>
+            </div>
+            <span class="project-arrow"><i class="fa-solid fa-plus"></i></span>
+          </div>
+        </button>
+        <div class="project-details">
+          <div class="project-details-inner">
+            <p class="project-description">Designed to monitor inbox activity, classify requests, generate contextual responses, and speed up communication workflows for client-facing operations.</p>
+            <div class="project-meta-grid">
+              <div><span>Role</span><p>AI Engineer</p></div>
+              <div><span>Duration</span><p>Client workflow build</p></div>
+              <div><span>Outcome</span><p>Faster email handling and reduced manual reply workload</p></div>
+            </div>
+            <div class="project-tags">
+              <span>Python</span>
+              <span>Gmail API</span>
+              <span>OpenAI</span>
+              <span>Automation</span>
+              <span>Prompt Engineering</span>
+              <span>Email Workflows</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/NoorullahZamindar-007/AI--Email---Agent" target="_blank"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+        </div>
+      </article>
 
-    <!-- Project 4: Vehicle-Detection-and-Counting -->
-    <div class="project-card">
-      <img src="images/sentiment.jpg" alt="Sentiment Analysis">
-      <div class="project-info">
-        <h3>Vehicle-Detection-and-Counting</h3>
-        <p>vehicle detection and counting in uploaded video files using OpenCV and Haar Cascade Classifiers.</p>
-        <a href="https://github.com/NoorullahZamindar-007/Vehicle-Detection-and-Counting" target="_blank"><i class="fab fa-github"></i></a>
-      </div>
+      <article class="project-card" data-project-card data-project-category="automation">
+        <button class="project-toggle" type="button" aria-expanded="false">
+          <div class="project-visual">
+            <img src="https://opengraph.githubassets.com/1/NoorullahZamindar-007/Ai-customer-support" alt="AI customer support repository preview" />
+            <div class="project-glow"></div>
+          </div>
+          <div class="project-header">
+            <div class="project-title-wrap">
+              <span class="project-type">Support Automation</span>
+              <h3>AI Customer Support</h3>
+              <p class="project-summary">Support automation workflow for handling customer questions with faster, more consistent responses.</p>
+            </div>
+            <span class="project-arrow"><i class="fa-solid fa-plus"></i></span>
+          </div>
+        </button>
+        <div class="project-details">
+          <div class="project-details-inner">
+            <p class="project-description">Built to reduce repetitive support handling by combining automation logic, client communication flows, and service response structure.</p>
+            <div class="project-meta-grid">
+              <div><span>Role</span><p>Automation Developer</p></div>
+              <div><span>Duration</span><p>Support workflow build</p></div>
+              <div><span>Outcome</span><p>Reduced manual support work and improved consistency of responses</p></div>
+            </div>
+            <div class="project-tags">
+              <span>AI Support</span>
+              <span>Automation</span>
+              <span>Workflow Design</span>
+              <span>Client Handling</span>
+              <span>API Logic</span>
+              <span>Response Systems</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/NoorullahZamindar-007/Ai-customer-support" target="_blank"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" data-project-card data-project-category="data ai automation">
+        <button class="project-toggle" type="button" aria-expanded="false">
+          <div class="project-visual">
+            <img src="https://opengraph.githubassets.com/1/NoorullahZamindar-007/Text-Extractor-From-Image" alt="Text extractor from image repository preview" />
+            <div class="project-glow"></div>
+          </div>
+          <div class="project-header">
+            <div class="project-title-wrap">
+              <span class="project-type">OCR Platform</span>
+              <h3>Text Extractor From Image</h3>
+              <p class="project-summary">Extracts readable text from images for document workflows and data preparation.</p>
+            </div>
+            <span class="project-arrow"><i class="fa-solid fa-plus"></i></span>
+          </div>
+        </button>
+        <div class="project-details">
+          <div class="project-details-inner">
+            <p class="project-description">Built to convert image-based text into usable digital content for data processing, automation, and practical OCR tasks.</p>
+            <div class="project-meta-grid">
+              <div><span>Role</span><p>Python Developer</p></div>
+              <div><span>Duration</span><p>OCR build</p></div>
+              <div><span>Outcome</span><p>Improved text extraction workflow for image-based data</p></div>
+            </div>
+            <div class="project-tags">
+              <span>Python</span>
+              <span>OCR</span>
+              <span>Image Processing</span>
+              <span>Text Extraction</span>
+              <span>Automation</span>
+              <span>Data Handling</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/NoorullahZamindar-007/Text-Extractor-From-Image" target="_blank"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" data-project-card data-project-category="ai data">
+        <button class="project-toggle" type="button" aria-expanded="false">
+          <div class="project-visual">
+            <img src="https://opengraph.githubassets.com/1/NoorullahZamindar-007/Traffic-Sign-Classification" alt="Traffic sign classification repository preview" />
+            <div class="project-glow"></div>
+          </div>
+          <div class="project-header">
+            <div class="project-title-wrap">
+              <span class="project-type">Deep Learning</span>
+              <h3>Traffic Sign Classification</h3>
+              <p class="project-summary">Deep learning classification system for recognizing traffic signs using CNN techniques.</p>
+            </div>
+            <span class="project-arrow"><i class="fa-solid fa-plus"></i></span>
+          </div>
+        </button>
+        <div class="project-details">
+          <div class="project-details-inner">
+            <p class="project-description">Developed as an image classification project using CNN-based training and evaluation for real-world sign recognition tasks.</p>
+            <div class="project-meta-grid">
+              <div><span>Role</span><p>ML Developer</p></div>
+              <div><span>Duration</span><p>Model development project</p></div>
+              <div><span>Outcome</span><p>Working CNN-based classification pipeline for computer vision practice</p></div>
+            </div>
+            <div class="project-tags">
+              <span>TensorFlow</span>
+              <span>Keras</span>
+              <span>CNN</span>
+              <span>Computer Vision</span>
+              <span>Classification</span>
+              <span>Image Data</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/NoorullahZamindar-007/Traffic-Sign-Classification" target="_blank"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" data-project-card data-project-category="ai web data">
+        <button class="project-toggle" type="button" aria-expanded="false">
+          <div class="project-visual">
+            <img src="https://opengraph.githubassets.com/1/NoorullahZamindar-007/Employee-Attrition-Prediction-Web-App" alt="Employee attrition prediction repository preview" />
+            <div class="project-glow"></div>
+          </div>
+          <div class="project-header">
+            <div class="project-title-wrap">
+              <span class="project-type">Predictive Analytics</span>
+              <h3>Employee Attrition Prediction Web App</h3>
+              <p class="project-summary">Web-based machine learning application for analyzing employee attrition patterns.</p>
+            </div>
+            <span class="project-arrow"><i class="fa-solid fa-plus"></i></span>
+          </div>
+        </button>
+        <div class="project-details">
+          <div class="project-details-inner">
+            <p class="project-description">Created to support employee attrition analysis with predictive modeling, web presentation, and practical HR-focused insight delivery.</p>
+            <div class="project-meta-grid">
+              <div><span>Role</span><p>ML Web App Developer</p></div>
+              <div><span>Duration</span><p>Prediction app build</p></div>
+              <div><span>Outcome</span><p>Interactive model interface for attrition-focused analysis</p></div>
+            </div>
+            <div class="project-tags">
+              <span>Machine Learning</span>
+              <span>Web App</span>
+              <span>Prediction</span>
+              <span>Analytics</span>
+              <span>Python</span>
+              <span>Data Science</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/NoorullahZamindar-007/Employee-Attrition-Prediction-Web-App" target="_blank"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" data-project-card data-project-category="web ai">
+        <button class="project-toggle" type="button" aria-expanded="false">
+          <div class="project-visual">
+            <img src="https://opengraph.githubassets.com/1/NoorullahZamindar-007/Pok-mon-Legendary-Prediction-Web-Application" alt="Pokemon legendary prediction repository preview" />
+            <div class="project-glow"></div>
+          </div>
+          <div class="project-header">
+            <div class="project-title-wrap">
+              <span class="project-type">Prediction Web App</span>
+              <h3>Pokemon Legendary Prediction App</h3>
+              <p class="project-summary">Machine learning web app for predicting legendary classification from Pokemon features.</p>
+            </div>
+            <span class="project-arrow"><i class="fa-solid fa-plus"></i></span>
+          </div>
+        </button>
+        <div class="project-details">
+          <div class="project-details-inner">
+            <p class="project-description">Built as a practical machine learning web application that demonstrates feature-based prediction and accessible model presentation.</p>
+            <div class="project-meta-grid">
+              <div><span>Role</span><p>ML App Developer</p></div>
+              <div><span>Duration</span><p>Prediction web project</p></div>
+              <div><span>Outcome</span><p>Interactive prediction interface for model demonstration</p></div>
+            </div>
+            <div class="project-tags">
+              <span>Python</span>
+              <span>Machine Learning</span>
+              <span>Prediction</span>
+              <span>Web Application</span>
+              <span>Classification</span>
+              <span>UI</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/NoorullahZamindar-007/Pok-mon-Legendary-Prediction-Web-Application" target="_blank"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" data-project-card data-project-category="web ai">
+        <button class="project-toggle" type="button" aria-expanded="false">
+          <div class="project-visual">
+            <img src="https://opengraph.githubassets.com/1/NoorullahZamindar-007/Plant-Disease-Prediction-Web-App" alt="Plant disease prediction repository preview" />
+            <div class="project-glow"></div>
+          </div>
+          <div class="project-header">
+            <div class="project-title-wrap">
+              <span class="project-type">Agri AI</span>
+              <h3>Plant Disease Prediction Web App</h3>
+              <p class="project-summary">Prediction-focused web app for identifying plant disease patterns using ML techniques.</p>
+            </div>
+            <span class="project-arrow"><i class="fa-solid fa-plus"></i></span>
+          </div>
+        </button>
+        <div class="project-details">
+          <div class="project-details-inner">
+            <p class="project-description">Developed to demonstrate applied machine learning in agriculture with accessible web delivery and disease-oriented prediction logic.</p>
+            <div class="project-meta-grid">
+              <div><span>Role</span><p>ML Web App Developer</p></div>
+              <div><span>Duration</span><p>Prediction app build</p></div>
+              <div><span>Outcome</span><p>Working disease prediction interface for applied AI demonstration</p></div>
+            </div>
+            <div class="project-tags">
+              <span>Machine Learning</span>
+              <span>Web App</span>
+              <span>Prediction</span>
+              <span>Python</span>
+              <span>Applied AI</span>
+              <span>Classification</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/NoorullahZamindar-007/Plant-Disease-Prediction-Web-App" target="_blank"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" data-project-card data-project-category="data ai">
+        <button class="project-toggle" type="button" aria-expanded="false">
+          <div class="project-visual">
+            <img src="https://opengraph.githubassets.com/1/NoorullahZamindar-007/Vehicle-Detection-and-Counting" alt="Vehicle detection repository preview" />
+            <div class="project-glow"></div>
+          </div>
+          <div class="project-header">
+            <div class="project-title-wrap">
+              <span class="project-type">Computer Vision</span>
+              <h3>Vehicle Detection and Counting</h3>
+              <p class="project-summary">OpenCV-based vehicle detection pipeline for counting vehicles in uploaded video content.</p>
+            </div>
+            <span class="project-arrow"><i class="fa-solid fa-plus"></i></span>
+          </div>
+        </button>
+        <div class="project-details">
+          <div class="project-details-inner">
+            <p class="project-description">Developed as a computer vision project to identify vehicles and count movement events from video footage using classical detection methods.</p>
+            <div class="project-meta-grid">
+              <div><span>Role</span><p>Computer Vision Developer</p></div>
+              <div><span>Duration</span><p>Vision model project</p></div>
+              <div><span>Outcome</span><p>Automated vehicle count extraction from uploaded video files</p></div>
+            </div>
+            <div class="project-tags">
+              <span>OpenCV</span>
+              <span>Computer Vision</span>
+              <span>Video Processing</span>
+              <span>Detection</span>
+              <span>Counting</span>
+              <span>Python</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/NoorullahZamindar-007/Vehicle-Detection-and-Counting" target="_blank"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" data-project-card data-project-category="data ai">
+        <button class="project-toggle" type="button" aria-expanded="false">
+          <div class="project-visual">
+            <img src="https://opengraph.githubassets.com/1/NoorullahZamindar-007/Face-Swaping-App" alt="Face swaping repository preview" />
+            <div class="project-glow"></div>
+          </div>
+          <div class="project-header">
+            <div class="project-title-wrap">
+              <span class="project-type">Vision App</span>
+              <h3>Face Swaping App</h3>
+              <p class="project-summary">Face swapping application using facial landmark detection and image manipulation techniques.</p>
+            </div>
+            <span class="project-arrow"><i class="fa-solid fa-plus"></i></span>
+          </div>
+        </button>
+        <div class="project-details">
+          <div class="project-details-inner">
+            <p class="project-description">Built to experiment with face alignment, swapping logic, and image processing through practical computer vision techniques.</p>
+            <div class="project-meta-grid">
+              <div><span>Role</span><p>Computer Vision Developer</p></div>
+              <div><span>Duration</span><p>Image processing build</p></div>
+              <div><span>Outcome</span><p>Working facial landmark-based swap application</p></div>
+            </div>
+            <div class="project-tags">
+              <span>Python</span>
+              <span>OpenCV</span>
+              <span>Dlib</span>
+              <span>Facial Landmarks</span>
+              <span>Image Processing</span>
+              <span>Computer Vision</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/NoorullahZamindar-007/Face-Swaping-App" target="_blank"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+        </div>
+      </article>
     </div>
+  </section>
 
-    <!-- Project 5: Traffic-Sign-Classification
- -->
-    <div class="project-card">
-      <img src="images/gnns.png" alt="GNN Scaling Laws">
-      <div class="project-info">
-        <h3>Traffic-Sign-Classification</h3>
-        <p>Traffic Sign Classification Using Tensor Flow and Keras in CNN</p>
-        <a href="https://github.com/NoorullahZamindar-007/Traffic-Sign-Classification" target="_blank"><i class="fab fa-github"></i></a>
+  <section id="certifications" class="certifications" data-animate="fade-up">
+    <h2 class="section-title">Certifications</h2>
+    <p class="contact-intro">
+      Professional certifications across AI, cybersecurity, analytics, research, and freelancing-focused capacity building.
+    </p>
+    <div class="certifications-container">
+      <div class="certification-card">
+        <img src="images/certif1.png" alt="UNDP certification badge" class="cert-badge-image" />
+        <div class="cert-icon"><i class="fa-solid fa-flask"></i></div>
+        <h3>Certificate in Research</h3>
+        <p>Cambridge University</p>
+        <span class="cert-year">Year not listed</span>
+        <a href="images/certif1.png" target="_blank" class="cert-link">View Badge</a>
       </div>
-    </div>
 
-  </div>
-</section>
-
-<!-- Certifications Section -->
-<section id="certifications" class="certifications" data-animate="fade-up">
-  <h2 class="section-title">Certifications</h2>
-
-  <div class="certifications-container">
-
-    <!-- Certification 1 -->
-    <div class="certification-card">
-      <img src="images/certif1.png" alt="Certification 1">
-      <div class="certification-overlay">
-        <a href="https://www.linkedin.com/posts/undp-istanbul-center-for-private-sector-in-development_we-are-thrilled-to-announce-the-graduation-activity-7310304843686985729-4ApX?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEY13PMBXDJF1AgzxrmmzwHu-ervRWbpJTQ" target="_blank"><i class="fa-solid fa-link"></i></a>
+      <div class="certification-card">
+        <img src="images/certif1.png" alt="Agentic AI certification badge" class="cert-badge-image" />
+        <div class="cert-icon"><i class="fa-solid fa-robot"></i></div>
+        <h3>Agentic AI Certification</h3>
+        <p>UNDP Turkey</p>
+        <span class="cert-year">Year not listed</span>
+        <a href="images/certif1.png" target="_blank" class="cert-link">View Badge</a>
       </div>
-    </div>
 
-    <!-- Certification 2 -->
-    <div class="certification-card">
-      <img src="images/certif1.png" alt="Certification 2">
-      <div class="certification-overlay">
-        <a href="https://hbcxconsulting.com/" target="_blank"><i class="fa-solid fa-link"></i></a>
+      <div class="certification-card">
+        <img src="images/certif2.png" alt="Cybersecurity badge" class="cert-badge-image" />
+        <div class="cert-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <h3>Cybersecurity Certification</h3>
+        <p>UNDP ICPSD</p>
+        <span class="cert-year">Year not listed</span>
+        <a href="images/certif2.png" target="_blank" class="cert-link">View Badge</a>
       </div>
-    </div>
 
-    <!-- Certification 3 -->
-    <div class="certification-card">
-      <img src="images/certif3.png" alt="Certification 3">
-      <div class="certification-overlay">
-        <a href="https://www.datacamp.com/" target="_blank"><i class="fa-solid fa-link"></i></a>
+      <div class="certification-card">
+        <div class="cert-icon"><i class="fa-brands fa-google"></i></div>
+        <h3>Google Analytics Certification</h3>
+        <p>Google</p>
+        <span class="cert-year">Year not listed</span>
+        <a href="https://skillshop.exceedlms.com/student/catalog/list?category_ids=53-google-analytics" target="_blank" class="cert-link">Issuer Page</a>
       </div>
-    </div>
 
-    <!-- Certification 4 -->
-    <div class="certification-card">
-      <img src="images/certif4.png" alt="Certification 4">
-      <div class="certification-overlay">
-        <a href="https://www.datacamp.com/" target="_blank"><i class="fa-solid fa-link"></i></a>
+      <div class="certification-card">
+        <div class="cert-icon"><i class="fa-solid fa-lock"></i></div>
+        <h3>Introduction to Cybersecurity</h3>
+        <p>Cisco</p>
+        <span class="cert-year">Year not listed</span>
+        <a href="https://www.netacad.com/" target="_blank" class="cert-link">Issuer Page</a>
+      </div>
+
+      <div class="certification-card">
+        <div class="cert-icon"><i class="fa-solid fa-database"></i></div>
+        <h3>SQL Certification</h3>
+        <p>Udemy</p>
+        <span class="cert-year">Year not listed</span>
+        <a href="https://www.udemy.com/" target="_blank" class="cert-link">Issuer Page</a>
+      </div>
+
+      <div class="certification-card">
+        <img src="images/certif4.png" alt="AI and Data Science certificate badge" class="cert-badge-image" />
+        <div class="cert-icon"><i class="fa-solid fa-brain"></i></div>
+        <h3>AI and Data Science Certificate</h3>
+        <p>UNDP & HBC Company, Afghanistan</p>
+        <span class="cert-year">Year not listed</span>
+        <a href="images/certif4.png" target="_blank" class="cert-link">View Badge</a>
+      </div>
+
+      <div class="certification-card">
+        <img src="images/certif3.png" alt="Data analyst certificate badge" class="cert-badge-image" />
+        <div class="cert-icon"><i class="fa-solid fa-chart-column"></i></div>
+        <h3>Data Analysis, Machine Learning, and Data Science</h3>
+        <p>UNDP, Turkey</p>
+        <span class="cert-year">Year not listed</span>
+        <a href="images/certif3.png" target="_blank" class="cert-link">View Badge</a>
+      </div>
+
+      <div class="certification-card">
+        <div class="cert-icon"><i class="fa-solid fa-briefcase"></i></div>
+        <h3>Capacity Building (Freelancing)</h3>
+        <p>UNDP & Gloria</p>
+        <span class="cert-year">Year not listed</span>
+        <a href="https://www.undp.org/" target="_blank" class="cert-link">Issuer Page</a>
+      </div>
+
+      <div class="certification-card">
+        <div class="cert-icon"><i class="fa-brands fa-python"></i></div>
+        <h3>Python Certificate</h3>
+        <p>Rana University</p>
+        <span class="cert-year">Year not listed</span>
+        <a href="https://rana.edu.af/" target="_blank" class="cert-link">Issuer Page</a>
+      </div>
+
+      <div class="certification-card">
+        <div class="cert-icon"><i class="fa-brands fa-python"></i></div>
+        <h3>Python for Data Science</h3>
+        <p>Udemy</p>
+        <span class="cert-year">Year not listed</span>
+        <a href="https://www.udemy.com/" target="_blank" class="cert-link">Issuer Page</a>
+      </div>
+
+      <div class="certification-card">
+        <div class="cert-icon"><i class="fa-solid fa-chart-pie"></i></div>
+        <h3>Data Analysis Certificate</h3>
+        <p>HP</p>
+        <span class="cert-year">Year not listed</span>
+        <a href="https://www.hp.com/" target="_blank" class="cert-link">Issuer Page</a>
       </div>
     </div>
 
     <div class="social-links">
-      <a href="https://github.com/NoorullahZamindar-007" target="_blank">
+      <a href="https://github.com/NoorullahZamindar-007" target="_blank" aria-label="GitHub">
         <i class="fab fa-github"></i>
       </a>
-      <a href="https://www.linkedin.com/in/noorullah-zamindar-4975a328a/" target="_blank">
+      <a href="https://www.linkedin.com/in/noorullah-zamindar-4975a328a/" target="_blank" aria-label="LinkedIn">
         <i class="fab fa-linkedin"></i>
       </a>
     </div>
-  </div>
-</section>
+  </section>
 
+  <section id="proof" class="proof" data-animate="fade-up">
+    <h2 class="section-title">Proof & Client Highlights</h2>
+    <p class="contact-intro">
+      Platform-based trust signals and delivery proof from training, freelancing, and client-facing work.
+    </p>
+    <div class="proof-grid">
+      <article class="proof-card">
+        <span class="proof-metric">4.9 / 5.0</span>
+        <h3>italki Rating</h3>
+        <p>Maintained a top-rated teaching profile with strong learner satisfaction and consistent delivery.</p>
+      </article>
+      <article class="proof-card">
+        <span class="proof-metric">85+ Classes</span>
+        <h3>Teaching Delivery</h3>
+        <p>Completed more than 85 classes and project-based learning sessions through online teaching platforms.</p>
+      </article>
+      <article class="proof-card">
+        <span class="proof-metric">40+ Days</span>
+        <h3>POS Client Project</h3>
+        <p>Delivered a long-duration SQLite and PyQt6 POS desktop system for a USA-based client.</p>
+      </article>
+      <article class="proof-card">
+        <span class="proof-metric">5+ Projects</span>
+        <h3>Fiverr Teaching Projects</h3>
+        <p>Completed multiple Fiverr teaching and guidance projects focused on practical technical learning.</p>
+      </article>
+      <article class="proof-card">
+        <span class="proof-metric">USA + Dubai</span>
+        <h3>International Collaboration</h3>
+        <p>Worked remotely with clients and partners in the USA and Dubai on AI and data-driven systems.</p>
+      </article>
+      <article class="proof-card">
+        <span class="proof-metric">100+ Learners</span>
+        <h3>Training Impact</h3>
+        <p>Mentored and trained learners in AI, freelancing, automation, and applied project development.</p>
+      </article>
+    </div>
+  </section>
 
-  
+  <section id="featured-clients" class="specializations" data-animate="fade-up">
+    <h2 class="section-title">Featured Clients & Platforms</h2>
+    <div class="specialization-grid">
+      <article class="specialization-card">
+        <i class="fa-solid fa-building-columns"></i>
+        <h3>UNDP</h3>
+        <p>AI and machine learning training, data science capacity building, and automation-focused learning delivery.</p>
+      </article>
+      <article class="specialization-card">
+        <i class="fa-solid fa-hospital"></i>
+        <h3>AMHTC</h3>
+        <p>Backend systems, forecasting workflows, reporting pipelines, and dashboard-oriented data operations.</p>
+      </article>
+      <article class="specialization-card">
+        <i class="fa-solid fa-school"></i>
+        <h3>Ghazi Amanullah Khan University</h3>
+        <p>Lecture delivery and hands-on technical training in AI, Python, IT, and web development.</p>
+      </article>
+      <article class="specialization-card">
+        <i class="fa-solid fa-briefcase"></i>
+        <h3>Fiverr & italki</h3>
+        <p>Freelance teaching, practical client support, and rating-backed online delivery across multiple projects and classes.</p>
+      </article>
+      <article class="specialization-card">
+        <i class="fa-brands fa-linkedin"></i>
+        <h3>LinkedIn Network</h3>
+        <p>Client acquisition, proof of work, portfolio visibility, and professional networking for remote opportunities.</p>
+      </article>
+      <article class="specialization-card">
+        <i class="fa-brands fa-github"></i>
+        <h3>GitHub Portfolio</h3>
+        <p>Public project evidence across AI agents, OCR, ML web apps, computer vision, and deployment-ready code.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="contact" class="contact" data-animate="fade-up">
+    <h2 class="section-title">Contact</h2>
+    <p class="contact-intro">
+      Available for AI engineering, automation consulting, machine learning training, remote projects, and freelance collaboration.
+    </p>
+    <div class="contact-container">
+      <div class="contact-card">
+        <span class="contact-badge">Available for Remote Work</span>
+        <h3>Let’s build practical AI systems</h3>
+        <p>
+          If you need AI agents, workflow automation, dashboards, training programs, or machine learning support, contact me directly.
+        </p>
+        <div class="contact-actions">
+          <a href="mailto:noorullahzamindar9@gmail.com" class="contact-button primary">Email Me</a>
+          <a href="Noorullah_Zamindar_CV.pdf" download class="contact-button secondary">Download CV</a>
+        </div>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-item">
+          <span class="contact-label">Email</span>
+          <a href="mailto:noorullahzamindar9@gmail.com">noorullahzamindar9@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label">Phone</span>
+          <a href="tel:+93764835812">+93 764 835 812</a>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label">Phone</span>
+          <a href="tel:+93797529779">+93 797 529 779</a>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label">LinkedIn</span>
+          <a href="https://www.linkedin.com/in/noorullah-zamindar-4975a328a/" target="_blank">View Profile</a>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label">GitHub</span>
+          <a href="https://github.com/NoorullahZamindar-007" target="_blank">View Projects</a>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label">Location</span>
+          <p>Ahmad Shah Baba Mina, Saeed Jamaludin Town</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div>
+        <h3>Noorullah Zamindar</h3>
+        <p>AI Engineer, Data Scientist, Automation Specialist, and Technical Trainer.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/NoorullahZamindar-007" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/noorullah-zamindar-4975a328a/" target="_blank">LinkedIn</a>
+        <a href="mailto:noorullahzamindar9@gmail.com">Email</a>
+        <a href="Noorullah_Zamindar_CV.pdf" download>Download CV</a>
+      </div>
+    </div>
+    <p class="footer-copy">&copy; 2026 Noorullah Zamindar. Built for freelance, training, and remote AI opportunities.</p>
+  </footer>
+
   <script src="script.js"></script>
-
-  
 </body>
 </html>
-

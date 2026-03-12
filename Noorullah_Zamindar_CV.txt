@@ -1,0 +1,54 @@
+Noorullah Zamindar
+Ahmad Shah Baba Mina, Saeed Jamaludin Town
++93 764835812 | +93 797529779
+noorullahzamindar9@gmail.com
+LinkedIn: https://www.linkedin.com/in/noorullah-zamindar-4975a328a/
+Portfolio: https://noorullahzamindar-007.github.io/Portfolio/
+
+PROFESSIONAL SUMMARY
+AI Engineer and Data Scientist with over 5 years of experience in machine learning, automation systems, and data analytics. Skilled in Python, Pandas, NumPy, Matplotlib, TensorFlow, Keras, SQL, data engineering, and AI-driven automation workflows. Experienced in building AI agents, predictive models, dashboards, OCR systems, and automation pipelines.
+
+EDUCATION
+- Bachelor in Computer Science (Software Engineering), Rana University, Afghanistan
+- Bachelor in Business Administration (In Progress), Alagappa University, India (ICCR)
+- Diploma in English Language (DEL), Storai Institute, Afghanistan
+- High School, Abdul Qayum Wardak High School, Afghanistan
+
+EXPERIENCE
+- Freelancing & AI Automation Trainer (Part-Time), Feb 2026 - Present
+- AI / ML Trainer, UNDP, Jul 2025 - Sep 2026
+- System Manager, AMHTC, 2021 - Feb 2025
+- Visiting Lecturer and Trainer, Ghazi Amanullah Khan University, 2023 - Apr 2024
+- Field Engineer (Technical Assistant), io Global Services Pvt. Ltd., Feb 2020 - Mar 2021
+- Freelance / Remote Data Analyst & Machine Learning Engineer, 2020 - Present
+
+KEY SKILLS
+- Python, Pandas, NumPy, SciPy, SQL, MySQL, SQL Server
+- Scikit-learn, TensorFlow, Keras, OCR, AI Agents, Computer Vision
+- Zapier, Make, n8n, REST APIs, Webhooks, CRM Automation
+- Flask, Git, VS Code, PyQt6, Power BI, Tableau, HTML5, CSS3
+
+SELECTED PROJECTS
+- AI Email Auto-Responder Agent
+- AI Invoice & Document Extractor
+- WhatsApp / Telegram Support Bot
+- Facial Emotion Recognition System
+- AI Research Agent
+- AI-Enhanced POS Desktop System
+- Website Lead Capture to CRM Automation
+- AI Social Media Auto-Post Generator
+- Online Car Reservation App
+
+CERTIFICATIONS
+- Certificate in Research, Cambridge University
+- Agentic AI Certification, UNDP Turkey
+- Cybersecurity Certification, UNDP ICPSD
+- Google Analytics Certification, Google
+- Introduction to Cybersecurity, Cisco
+- SQL Certification, Udemy
+- AI and Data Science Certificate, UNDP & HBC Company
+- Data Analysis, Machine Learning, and Data Science, UNDP Turkey
+- Capacity Building (Freelancing), UNDP & Gloria
+- Python Certificate, Rana University
+- Python for Data Science, Udemy
+- Data Analysis Certificate, HP
