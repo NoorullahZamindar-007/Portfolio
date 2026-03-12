@@ -1716,9 +1716,50 @@ section {
     display: none;
 }
 
-/* Mobile Responsive Styles */
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    html {
+        font-size: 58%;
+    }
+
+    header,
+    section,
+    .site-footer {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .hero {
+        gap: 3rem;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .container,
+    .contact-container,
+    .projects-container,
+    .skills-container,
+    .specialization-grid,
+    .proof-grid,
+    .certifications-container {
+        width: 100%;
+    }
+}
+
 @media (max-width: 768px) {
-    /* Header */
+    section {
+        min-height: auto;
+        padding-top: 10rem;
+        padding-bottom: 5rem;
+    }
+
+    header {
+        padding-top: 1.6rem;
+        padding-bottom: 1.6rem;
+    }
+
     #menu-icon {
         display: block;
     }
@@ -1726,98 +1767,146 @@ section {
     .navbar {
         position: absolute;
         top: 100%;
-        left: -100%;
-        width: 100%;
-        background: var(--bg-color);
-        padding: 1rem 4%;
-        transition: .3s ease;
+        left: 0;
+        right: 0;
+        padding: 1.2rem 5% 2rem;
+        background: rgba(24, 9, 42, 0.98);
+        border-top: 1px solid rgba(183, 142, 234, 0.15);
+        box-shadow: 0 18px 36px rgba(8, 3, 15, 0.32);
+        transform: translateY(-1rem);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: transform 0.25s ease, opacity 0.25s ease, visibility 0.25s ease;
+        max-height: 75vh;
+        overflow-y: auto;
     }
 
     .navbar.active {
-        left: 0;
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
     }
 
     .navbar a {
         display: block;
-        margin: 3rem 0;
-        text-align: center;
+        margin: 1.8rem 0;
+        text-align: left;
+        font-size: 1.8rem;
     }
 
-    /* Hero Section */
     .hero {
         flex-direction: column-reverse;
         text-align: center;
         flex-wrap: wrap;
+        gap: 2.8rem;
     }
 
     .hero-content {
-        margin-top: 3rem;
+        margin-top: 0;
+        max-width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 4.8rem;
+    }
+
+    .hero h3 {
+        font-size: 2.8rem;
     }
 
     .hero p {
         margin-right: 0;
     }
 
-    .hero-meta {
+    .hero-meta,
+    .hero-actions,
+    .social-links {
         justify-content: center;
+    }
+
+    .hero-meta span {
+        width: 100%;
     }
 
     .hero-image {
-        width: 280px;
-        height: 280px;
+        width: min(320px, 74vw);
+        height: min(320px, 74vw);
+        flex-basis: auto;
+        margin-left: 0;
     }
 
-    .hero-actions {
+    .social-links {
+        margin-top: 3rem;
+    }
+
+    .social-links a {
+        margin: 1.5rem 0.7rem 0;
+    }
+
+    .about {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+
+    .container {
+        gap: 3rem;
         justify-content: center;
     }
 
-    /* About Section */
     .about-image {
         order: -1;
-        margin-bottom: 3rem;
+        width: min(300px, 72vw);
+        height: min(300px, 72vw);
+        margin-bottom: 1rem;
     }
 
-    /* Projects Section */
-    .projects-container {
-        grid-template-columns: 1fr;
+    .about-content {
+        max-width: 100%;
+        text-align: center;
     }
 
-    .project-meta-grid {
-        grid-template-columns: 1fr;
+    .about-content h2 {
+        font-size: 3.2rem;
     }
 
-    .contact-container {
-        grid-template-columns: 1fr;
+    .about-content h3 {
+        font-size: 2.2rem;
     }
 
-    .contact-grid {
-        grid-template-columns: 1fr;
+    .about-content p {
+        font-size: 1.6rem;
     }
 
+    .specialization-grid,
+    .skills-container,
+    .projects-container,
+    .certifications-container,
+    .contact-grid,
     .footer-content {
         grid-template-columns: 1fr;
     }
 
-    /* Timeline Adjustments */
     .timeline {
-        width: 90%;
+        width: 100%;
+        padding-left: 2rem;
     }
 
-    .timeline-item {
-        padding-left: 6rem;
+    .timeline::before,
+    .education .timeline::before {
+        left: 0.2rem;
     }
 
-    .timeline::before {
-        left: -1.5rem;
+    .timeline-item,
+    .education .timeline-item {
+        padding: 2rem 1.8rem 2rem 5rem;
+        padding-left: 5rem;
     }
 
-    .timeline-item::before {
-        left: -2.2rem;
-    }
-
-    /* Certifications */
-    .certification-card {
-        min-height: 150px;
+    .timeline-item::before,
+    .education .timeline-item::before {
+        left: -0.6rem;
     }
 
     .skill-toggle {
@@ -1839,14 +1928,115 @@ section {
     .skill-tags {
         padding: 1.6rem 2rem 2rem;
     }
+
+    .project-header {
+        padding: 1.8rem;
+    }
+
+    .project-visual {
+        height: 200px;
+    }
+
+    .project-meta-grid,
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-card,
+    .contact-item,
+    .specialization-card,
+    .proof-card,
+    .project-card,
+    .certification-card {
+        border-radius: 1.8rem;
+    }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 520px) {
     html {
         font-size: 55%;
     }
 
+    header,
+    .site-footer {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    section {
+        padding-left: 4%;
+        padding-right: 4%;
+        padding-top: 9rem;
+        padding-bottom: 4.2rem;
+    }
+
+    .logo {
+        font-size: 2.1rem;
+    }
+
+    .theme-toggle {
+        width: 3.8rem;
+        height: 3.8rem;
+    }
+
     .hero h1 {
-        font-size: 4.5rem;
+        font-size: 4.2rem;
+    }
+
+    .hero h3 {
+        font-size: 2.4rem;
+    }
+
+    .availability-badge {
+        font-size: 1.15rem;
+        line-height: 1.5;
+        text-align: left;
+    }
+
+    .hero-button,
+    .contact-button {
+        width: 100%;
+    }
+
+    .hero-meta span {
+        padding: 0.9rem 1.2rem;
+    }
+
+    .project-toggle,
+    .skill-toggle {
+        text-align: left;
+    }
+
+    .project-header,
+    .skill-toggle {
+        gap: 1.2rem;
+    }
+
+    .project-title-wrap h3,
+    .timeline-item h3,
+    .education .timeline-item h3,
+    .contact-card h3 {
+        font-size: 2.2rem;
+    }
+
+    .project-summary,
+    .project-description,
+    .contact-card p,
+    .contact-item a,
+    .contact-item p {
+        font-size: 1.45rem;
+    }
+
+    .project-links a {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .proof-metric,
+    .project-filter,
+    .skill-preview-tags span,
+    .skill-meta span,
+    .project-tags span {
+        font-size: 1.05rem;
     }
 }
