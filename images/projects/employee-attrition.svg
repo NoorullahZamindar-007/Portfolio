@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760">
+  <rect width="1200" height="760" fill="#160923"/>
+  <circle cx="940" cy="150" r="190" fill="#b78eea" opacity=".14"/>
+  <circle cx="160" cy="620" r="180" fill="#56c2ff" opacity=".12"/>
+  <rect x="110" y="120" width="980" height="520" rx="36" fill="#241338" stroke="#b78eea" stroke-opacity=".3"/>
+  <rect x="170" y="220" width="320" height="310" rx="26" fill="#1a0f2b" stroke="#caa6f3" stroke-opacity=".4"/>
+  <rect x="220" y="450" width="34" height="36" rx="8" fill="#73dcff"/>
+  <rect x="278" y="404" width="34" height="82" rx="8" fill="#9f86c0"/>
+  <rect x="336" y="346" width="34" height="140" rx="8" fill="#caa6f3"/>
+  <rect x="394" y="294" width="34" height="192" rx="8" fill="#ffffff" opacity=".88"/>
+  <path d="M220 332c62-38 124-52 208-58" stroke="#73dcff" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <text x="550" y="248" fill="#caa6f3" font-size="28" font-family="Arial, sans-serif" letter-spacing="4">PREDICTIVE ANALYTICS</text>
+  <text x="550" y="350" fill="#ffffff" font-size="66" font-weight="700" font-family="Arial, sans-serif">Employee Attrition</text>
+  <text x="550" y="420" fill="#ffffff" font-size="66" font-weight="700" font-family="Arial, sans-serif">Prediction</text>
+  <text x="550" y="490" fill="#efe8f8" font-size="26" font-family="Arial, sans-serif">HR analytics, model interface, business insight</text>
+</svg>

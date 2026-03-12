@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760">
+  <rect width="1200" height="760" fill="#0f1b14"/>
+  <circle cx="935" cy="170" r="190" fill="#81f4a7" opacity=".16"/>
+  <circle cx="180" cy="610" r="170" fill="#c7a8ff" opacity=".1"/>
+  <rect x="120" y="120" width="960" height="520" rx="36" fill="#183124" stroke="#81f4a7" stroke-opacity=".24"/>
+  <path d="M280 500c-14-126 48-240 190-280 8 150-60 254-190 280z" fill="#81f4a7"/>
+  <path d="M296 486c72-82 116-146 154-234" stroke="#0f1b14" stroke-width="12" fill="none" stroke-linecap="round"/>
+  <circle cx="370" cy="318" r="16" fill="#ff7b7b"/>
+  <circle cx="328" cy="390" r="14" fill="#ff7b7b"/>
+  <circle cx="410" cy="386" r="12" fill="#ff7b7b"/>
+  <text x="540" y="248" fill="#81f4a7" font-size="28" font-family="Arial, sans-serif" letter-spacing="4">AGRI AI</text>
+  <text x="540" y="350" fill="#ffffff" font-size="66" font-weight="700" font-family="Arial, sans-serif">Plant Disease</text>
+  <text x="540" y="420" fill="#ffffff" font-size="66" font-weight="700" font-family="Arial, sans-serif">Prediction</text>
+  <text x="540" y="490" fill="#eefbf1" font-size="26" font-family="Arial, sans-serif">Agriculture, classification, applied machine learning</text>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#170726"/>
+      <stop offset="100%" stop-color="#402064"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="760" fill="url(#bg)"/>
+  <circle cx="920" cy="160" r="180" fill="#b78eea" opacity=".18"/>
+  <circle cx="230" cy="620" r="170" fill="#56c2ff" opacity=".12"/>
+  <rect x="120" y="140" width="960" height="480" rx="34" fill="#25143a" stroke="#b78eea" stroke-opacity=".32"/>
+  <rect x="180" y="220" width="300" height="210" rx="24" fill="#1d102e" stroke="#caa6f3" stroke-opacity=".45"/>
+  <path d="M225 255h210l-105 85z" fill="#b78eea" opacity=".9"/>
+  <rect x="210" y="280" width="240" height="115" rx="18" fill="#331b50" opacity=".95"/>
+  <text x="540" y="305" fill="#caa6f3" font-size="28" font-family="Arial, sans-serif" letter-spacing="4">AI AGENT</text>
+  <text x="540" y="380" fill="#ffffff" font-size="62" font-weight="700" font-family="Arial, sans-serif">Email Auto-Responder</text>
+  <text x="540" y="438" fill="#efe8f8" font-size="26" font-family="Arial, sans-serif">Inbox automation, intent detection, contextual drafting</text>
+  <rect x="540" y="486" width="172" height="42" rx="21" fill="#b78eea" opacity=".18" stroke="#b78eea" stroke-opacity=".45"/>
+  <text x="576" y="514" fill="#ffffff" font-size="22" font-family="Arial, sans-serif">Gmail API</text>
+</svg>

@@ -1,97 +1,149 @@
 %PDF-1.4
 1 0 obj<</Type/Catalog/Pages 2 0 R>>endobj
 2 0 obj<</Type/Pages/Count 1/Kids[3 0 R]>>endobj
-3 0 obj<</Type/Page/Parent 2 0 R/MediaBox[0 0 612 842]/Resources<</Font<</F1 4 0 R>>>>/Contents 5 0 R>>endobj
+3 0 obj<</Type/Page/Parent 2 0 R/MediaBox[0 0 612 842]/Resources<</Font<</F1 4 0 R/F2 5 0 R>>>>/Contents 6 0 R>>endobj
 4 0 obj<</Type/Font/Subtype/Type1/BaseFont/Helvetica>>endobj
-5 0 obj<</Length 1701>>stream
+5 0 obj<</Type/Font/Subtype/Type1/BaseFont/Helvetica-Bold>>endobj
+6 0 obj<</Length 2731>>stream
+q
+0.09 0.04 0.16 rg
+0 760 612 82 re f
+Q
 BT
-/F1 14 Tf
-50 790 Td
-18 TL
+/F2 24 Tf
+1 1 1 rg
+50 807 Td
 (Noorullah Zamindar) Tj
-T*
+0 -26 Td
+/F1 11 Tf
 (AI Engineer | Data Scientist | Automation Specialist) Tj
-T*
-(Email: noorullahzamindar9@gmail.com) Tj
-T*
-(Phone: +93 764 835 812 | +93 797 529 779) Tj
-T*
+0 -18 Td
+(Email: noorullahzamindar9@gmail.com   |   Phone: +93 764 835 812 / +93 797 529 779) Tj
+0 -16 Td
 (Location: Ahmad Shah Baba Mina, Saeed Jamaludin Town, Afghanistan) Tj
-T*
-(LinkedIn: https://www.linkedin.com/in/noorullah-zamindar-4975a328a/) Tj
-T*
-(GitHub: https://github.com/NoorullahZamindar-007) Tj
-T*
-() Tj
-T*
-(Professional Summary) Tj
-T*
-(AI Engineer and Data Scientist with 5+ years of experience in machine learning,) Tj
-T*
-(automation systems, analytics, and technical training. Builds AI agents,) Tj
-T*
-(predictive models, automation workflows, dashboards, and practical training systems.) Tj
-T*
-() Tj
-T*
-(Core Strengths) Tj
-T*
-(Python, Pandas, NumPy, SQL, Scikit-learn, TensorFlow, Keras, Flask, Power BI,) Tj
-T*
-(Tableau, Zapier, Make, n8n, REST APIs, OCR, computer vision, dashboards.) Tj
-T*
-() Tj
-T*
-(Experience Highlights) Tj
-T*
-(- AI / ML Trainer at UNDP) Tj
-T*
-(- System Manager at AMHTC) Tj
-T*
-(- Visiting Lecturer at Ghazi Amanullah Khan University) Tj
-T*
-(- Freelance Data Analyst & Machine Learning Engineer for international clients) Tj
-T*
-(- Freelancing & AI Automation Trainer) Tj
-T*
-() Tj
-T*
-(Proof) Tj
-T*
-(- Trained 100+ learners) Tj
-T*
-(- Completed 85+ online classes) Tj
-T*
-(- Maintained 4.9/5.0 rating on italki) Tj
-T*
-(- Delivered a 40+ day POS desktop project for a USA client) Tj
-T*
-() Tj
-T*
-(Selected Projects) Tj
-T*
+ET
+q
+0.72 0.56 0.92 RG
+1.2 w
+50 742 512 0 re S
+Q
+BT
+/F2 13 Tf
+0.72 0.56 0.92 rg
+50 718 Td
+(PROFILE) Tj
+/F1 10 Tf
+0.15 0.11 0.2 rg
+0 -18 Td
+(AI Engineer and Data Scientist with 5+ years of experience in machine learning, automation systems,) Tj
+0 -14 Td
+(analytics, and technical training. Builds AI agents, predictive models, dashboards, OCR systems,) Tj
+0 -14 Td
+(and workflow automation for real client delivery, education, and business use.) Tj
+ET
+BT
+/F2 13 Tf
+0.72 0.56 0.92 rg
+50 642 Td
+(CORE SKILLS) Tj
+/F1 10 Tf
+0.15 0.11 0.2 rg
+0 -18 Td
+(Python, Pandas, NumPy, SQL, Scikit-learn, TensorFlow, Keras, Flask, Power BI, Tableau,) Tj
+0 -14 Td
+(Zapier, Make, n8n, OCR, Computer Vision, REST APIs, Automation Workflows, Technical Training) Tj
+ET
+BT
+/F2 13 Tf
+0.72 0.56 0.92 rg
+50 582 Td
+(EXPERIENCE HIGHLIGHTS) Tj
+/F1 10 Tf
+0.15 0.11 0.2 rg
+0 -18 Td
+(- AI / ML Trainer, UNDP) Tj
+0 -14 Td
+(- System Manager, AMHTC) Tj
+0 -14 Td
+(- Visiting Lecturer and Trainer, Ghazi Amanullah Khan University) Tj
+0 -14 Td
+(- Freelance / Remote Data Analyst and Machine Learning Engineer) Tj
+0 -14 Td
+(- Freelancing and AI Automation Trainer) Tj
+ET
+BT
+/F2 13 Tf
+0.72 0.56 0.92 rg
+50 474 Td
+(PROOF OF DELIVERY) Tj
+/F1 10 Tf
+0.15 0.11 0.2 rg
+0 -18 Td
+(- Trained 100+ learners in AI, freelancing, and automation) Tj
+0 -14 Td
+(- Completed 85+ online classes with strong learner feedback) Tj
+0 -14 Td
+(- Maintained 4.9 / 5.0 italki rating) Tj
+0 -14 Td
+(- Delivered a 40+ day POS desktop build for a USA-based client) Tj
+0 -14 Td
+(- Completed 5+ Fiverr teaching and guidance projects) Tj
+ET
+BT
+/F2 13 Tf
+0.72 0.56 0.92 rg
+50 366 Td
+(SELECTED PROJECTS) Tj
+/F1 10 Tf
+0.15 0.11 0.2 rg
+0 -18 Td
 (- AI Email Auto-Responder Agent) Tj
-T*
+0 -14 Td
 (- AI Customer Support) Tj
-T*
-(- Employee Attrition Prediction Web App) Tj
-T*
-(- Plant Disease Prediction Web App) Tj
-T*
-(- Vehicle Detection and Counting) Tj
-T*
+0 -14 Td
 (- Text Extractor From Image) Tj
-T*
+0 -14 Td
+(- Employee Attrition Prediction Web App) Tj
+0 -14 Td
+(- Plant Disease Prediction Web App) Tj
+0 -14 Td
+(- Vehicle Detection and Counting) Tj
+ET
+BT
+/F2 13 Tf
+0.72 0.56 0.92 rg
+50 244 Td
+(LINKS) Tj
+/F1 10 Tf
+0.15 0.11 0.2 rg
+0 -18 Td
+(GitHub: github.com/NoorullahZamindar-007) Tj
+0 -14 Td
+(LinkedIn: linkedin.com/in/noorullah-zamindar-4975a328a) Tj
+0 -14 Td
+(Portfolio: noorullahzamindar-007.github.io/Portfolio/) Tj
+ET
+q
+0.72 0.56 0.92 rg
+50 58 512 1 re f
+Q
+BT
+/F1 9 Tf
+0.35 0.26 0.45 rg
+50 42 Td
+(Available for freelance, remote roles, AI training, and workflow automation projects.) Tj
 ET
 endstream endobj
 xref
-0 6
+0 7
 0000000000 65535 f 
 0000000009 00000 n 
 0000000052 00000 n 
 0000000101 00000 n 
-0000000211 00000 n 
-0000000272 00000 n 
-trailer<</Size 6/Root 1 0 R>>
+0000000220 00000 n 
+0000000281 00000 n 
+0000000347 00000 n 
+trailer<</Size 7/Root 1 0 R>>
 startxref
-2021%%EOF
+3126
+%%EOF

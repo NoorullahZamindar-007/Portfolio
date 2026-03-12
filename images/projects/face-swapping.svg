@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760">
+  <rect width="1200" height="760" fill="#150822"/>
+  <circle cx="930" cy="170" r="180" fill="#ff8db6" opacity=".12"/>
+  <circle cx="170" cy="620" r="170" fill="#73dcff" opacity=".1"/>
+  <rect x="120" y="120" width="960" height="520" rx="36" fill="#241338" stroke="#b78eea" stroke-opacity=".3"/>
+  <circle cx="275" cy="370" r="86" fill="#f6d2c2"/>
+  <circle cx="395" cy="370" r="86" fill="#d8c4ff"/>
+  <path d="M242 352q30-24 62 0" stroke="#1a0f2b" stroke-width="10" fill="none" stroke-linecap="round"/>
+  <path d="M362 352q30-24 62 0" stroke="#1a0f2b" stroke-width="10" fill="none" stroke-linecap="round"/>
+  <path d="M270 405q18 16 36 0" stroke="#1a0f2b" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <path d="M390 405q18 16 36 0" stroke="#1a0f2b" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <path d="M335 300l6 140" stroke="#ffffff" stroke-width="8" stroke-dasharray="10 12"/>
+  <text x="540" y="248" fill="#ff8db6" font-size="28" font-family="Arial, sans-serif" letter-spacing="4">VISION APP</text>
+  <text x="540" y="350" fill="#ffffff" font-size="66" font-weight="700" font-family="Arial, sans-serif">Face Swaping</text>
+  <text x="540" y="420" fill="#ffffff" font-size="66" font-weight="700" font-family="Arial, sans-serif">Application</text>
+  <text x="540" y="490" fill="#efe8f8" font-size="26" font-family="Arial, sans-serif">Landmarks, image processing, visual transformation</text>
+</svg>

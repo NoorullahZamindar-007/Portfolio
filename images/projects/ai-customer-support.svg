@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760">
+  <rect width="1200" height="760" fill="#160823"/>
+  <circle cx="940" cy="170" r="200" fill="#6de2ff" opacity=".13"/>
+  <circle cx="210" cy="620" r="170" fill="#b78eea" opacity=".14"/>
+  <rect x="120" y="120" width="960" height="520" rx="34" fill="#231236" stroke="#b78eea" stroke-opacity=".3"/>
+  <rect x="180" y="210" width="270" height="260" rx="28" fill="#1a0e29" stroke="#73dcff" stroke-opacity=".5"/>
+  <circle cx="315" cy="280" r="48" fill="#73dcff" opacity=".9"/>
+  <rect x="235" y="350" width="160" height="22" rx="11" fill="#b78eea" opacity=".8"/>
+  <rect x="215" y="390" width="200" height="18" rx="9" fill="#ffffff" opacity=".4"/>
+  <rect x="510" y="230" width="420" height="56" rx="28" fill="#311b4c"/>
+  <rect x="510" y="320" width="360" height="18" rx="9" fill="#ffffff" opacity=".4"/>
+  <rect x="510" y="360" width="300" height="18" rx="9" fill="#ffffff" opacity=".28"/>
+  <text x="510" y="195" fill="#73dcff" font-size="28" font-family="Arial, sans-serif" letter-spacing="4">AUTOMATION</text>
+  <text x="510" y="455" fill="#ffffff" font-size="64" font-weight="700" font-family="Arial, sans-serif">AI Customer Support</text>
+  <text x="510" y="510" fill="#efe8f8" font-size="26" font-family="Arial, sans-serif">Faster responses, cleaner workflows, repeatable handling</text>
+</svg>

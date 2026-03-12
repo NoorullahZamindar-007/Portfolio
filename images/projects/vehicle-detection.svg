@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760">
+  <rect width="1200" height="760" fill="#120920"/>
+  <circle cx="940" cy="170" r="190" fill="#73dcff" opacity=".12"/>
+  <circle cx="180" cy="620" r="160" fill="#b78eea" opacity=".14"/>
+  <rect x="120" y="120" width="960" height="520" rx="36" fill="#241338" stroke="#b78eea" stroke-opacity=".28"/>
+  <rect x="170" y="260" width="320" height="240" rx="26" fill="#1a0f2b"/>
+  <path d="M208 430h242" stroke="#7b54b7" stroke-width="16" stroke-linecap="round"/>
+  <rect x="224" y="360" width="172" height="44" rx="22" fill="#ffffff"/>
+  <circle cx="252" cy="430" r="24" fill="#73dcff"/>
+  <circle cx="406" cy="430" r="24" fill="#73dcff"/>
+  <rect x="230" y="300" width="200" height="22" rx="11" fill="#b78eea" opacity=".7"/>
+  <text x="540" y="248" fill="#73dcff" font-size="28" font-family="Arial, sans-serif" letter-spacing="4">COMPUTER VISION</text>
+  <text x="540" y="350" fill="#ffffff" font-size="66" font-weight="700" font-family="Arial, sans-serif">Vehicle Detection</text>
+  <text x="540" y="420" fill="#ffffff" font-size="66" font-weight="700" font-family="Arial, sans-serif">&amp; Counting</text>
+  <text x="540" y="490" fill="#efe8f8" font-size="26" font-family="Arial, sans-serif">Video processing, detection workflow, movement analysis</text>
+</svg>

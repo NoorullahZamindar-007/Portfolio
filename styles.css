@@ -96,7 +96,7 @@ body.is-loading {
 }
 
 section{
-    min-height: 100vh;
+    min-height: auto;
     padding: 10rem 9% 2rem;
 }
 
@@ -181,6 +181,7 @@ header {
     align-items: center;
     flex-wrap: nowrap;
     gap: 4rem;
+    min-height: 100vh;
 }
 
 /* Hero Content */
@@ -307,7 +308,7 @@ span{
 
 /* Social Links */
 .social-links {
-    margin-top: 100px;
+    margin-top: 3rem;
 }
 
 .hero .social-links {
@@ -545,6 +546,35 @@ span{
     color: rgba(238, 238, 238, 0.86);
 }
 
+.compact-proof-grid {
+    margin-bottom: 3rem;
+}
+
+.repo-grid {
+    margin-top: 0.6rem;
+}
+
+.badge-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem;
+    margin-top: 1.6rem;
+}
+
+.badge-cloud span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.7rem 1rem;
+    border-radius: 999px;
+    font-size: 1.1rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--text-color);
+    border: 1px solid rgba(183, 142, 234, 0.24);
+    background: rgba(183, 142, 234, 0.08);
+}
+
 .proof-metric {
     display: inline-flex;
     margin-bottom: 1.4rem;
@@ -614,7 +644,7 @@ span{
 /* Timeline Container */
 .timeline {
     position: relative;
-    width: 80%;
+    width: min(900px, 100%);
     max-width: 900px;
 }
 
@@ -624,7 +654,7 @@ span{
     left: -2rem;
     top: 14px;
     width: 2px;
-    height: 99%;
+    bottom: 14px;
     background: var(--main-color);
 }
 
@@ -633,7 +663,7 @@ span{
 
 .timeline-item {
     position: relative;
-    margin-bottom: 50px;
+    margin-bottom: 3rem;
     padding: 20px;
     padding-left: 100px;
     border-radius: 10px;
@@ -761,7 +791,7 @@ span{
 
 .education .timeline {
     position: relative;
-    width: 80%;
+    width: min(900px, 100%);
     max-width: 900px;
 }
 
@@ -771,13 +801,13 @@ span{
     top: 14px;
     left: -2rem;
     width: 2px;
-    height: 88%;
+    bottom: 14px;
     background: var(--main-color);
 }
 
 .education .timeline-item {
     position: relative;
-    margin-bottom: 50px;
+    margin-bottom: 3rem;
     padding: 20px;
     padding-left: 100px;
     border-radius: 10px;
@@ -1886,6 +1916,14 @@ section {
     .contact-grid,
     .footer-content {
         grid-template-columns: 1fr;
+    }
+
+    .proof-grid {
+        gap: 1.6rem;
+    }
+
+    .compact-proof-grid {
+        margin-bottom: 2rem;
     }
 
     .timeline {

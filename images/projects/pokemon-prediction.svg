@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760">
+  <rect width="1200" height="760" fill="#13081f"/>
+  <circle cx="945" cy="180" r="180" fill="#ffd45b" opacity=".16"/>
+  <circle cx="170" cy="620" r="170" fill="#6ec9ff" opacity=".14"/>
+  <rect x="120" y="120" width="960" height="520" rx="36" fill="#241338" stroke="#b78eea" stroke-opacity=".3"/>
+  <circle cx="320" cy="380" r="120" fill="#ffffff"/>
+  <path d="M200 380h240" stroke="#1a0f2b" stroke-width="22"/>
+  <circle cx="320" cy="380" r="28" fill="#ffffff" stroke="#1a0f2b" stroke-width="18"/>
+  <path d="M200 380a120 120 0 0 1 240 0" fill="#ff6d6d"/>
+  <text x="540" y="248" fill="#ffd45b" font-size="28" font-family="Arial, sans-serif" letter-spacing="4">WEB APP</text>
+  <text x="540" y="350" fill="#ffffff" font-size="66" font-weight="700" font-family="Arial, sans-serif">Pokemon Legendary</text>
+  <text x="540" y="420" fill="#ffffff" font-size="66" font-weight="700" font-family="Arial, sans-serif">Prediction</text>
+  <text x="540" y="490" fill="#efe8f8" font-size="26" font-family="Arial, sans-serif">Classification demo, feature-based prediction, UI</text>
+</svg>
