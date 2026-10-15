@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelectorAll('header nav a');
     const loader = document.querySelector('#page-loader');
     const scrollProgress = document.querySelector('#scroll-progress');
+    const backToTop = document.querySelector('#back-to-top');
     const themeToggle = document.querySelector('#theme-toggle');
     const storedTheme = localStorage.getItem('portfolio-theme');
 
@@ -239,7 +240,18 @@ document.addEventListener('DOMContentLoaded', () => {
             const progress = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
             scrollProgress.style.width = `${progress}%`;
         }
+
+        if (backToTop) {
+            const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            backToTop.classList.toggle('visible', scrollTop > 600);
+        }
     };
+
+    if (backToTop) {
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
 
     if (themeToggle) {
         themeToggle.addEventListener('click', () => {
