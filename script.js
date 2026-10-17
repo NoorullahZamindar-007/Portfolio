@@ -66,32 +66,41 @@ document.addEventListener('DOMContentLoaded', () => {
         animationObserver.observe(child);
     });
 
-    const sr = ScrollReveal({
-        reset: false,
-        distance: '15px',
-        duration: 1000,
-        delay: 200,
-        viewFactor: 0.3,
-        mobile: true,
-        cleanup: true
-    })
-      
-      sr.reveal('.left', { origin: 'left' })
-      sr.reveal('.right', { origin: 'right' })
+    // Third-party CDN libraries may be blocked (ad blockers, offline dev);
+    // initialize them only when present so the rest of the UI script keeps working.
+    const rotatingRoleEl = document.querySelector('#rotating-role');
+    if (typeof ScrollReveal !== 'undefined') {
+        const sr = ScrollReveal({
+            reset: false,
+            distance: '15px',
+            duration: 1000,
+            delay: 200,
+            viewFactor: 0.3,
+            mobile: true,
+            cleanup: true
+        })
 
+        sr.reveal('.left', { origin: 'left' })
+        sr.reveal('.right', { origin: 'right' })
+    }
 
-    const typed = new Typed('#rotating-role', {
-        strings: [
-            "AI Engineer",
-            "Data Scientist",
-            "ML Trainer",
-            "Automation Specialist"
-        ],
-        typeSpeed: 100,
-        backSpeed: 100,
-        backDelay: 1000,
-        loop: true,
-    });
+    if (typeof Typed !== 'undefined' && rotatingRoleEl) {
+        const typed = new Typed('#rotating-role', {
+            strings: [
+                "AI Engineer",
+                "Data Scientist",
+                "ML Trainer",
+                "Automation Specialist"
+            ],
+            typeSpeed: 100,
+            backSpeed: 100,
+            backDelay: 1000,
+            loop: true,
+        });
+    } else if (rotatingRoleEl && !rotatingRoleEl.textContent.trim()) {
+        // Static fallback when typed.js cannot load.
+        rotatingRoleEl.textContent = "AI Engineer";
+    }
 
     const skillCards = document.querySelectorAll('[data-skill-card]');
     const projectCards = document.querySelectorAll('[data-project-card]');
