@@ -1774,12 +1774,22 @@ section {
     will-change: transform, opacity;
 }
 
-/* Mobile Menu Icon */
+/* Mobile Menu Icon (a <button> so it is keyboard-focusable) */
 #menu-icon {
     font-size: 3.6rem;
     color: var(--text-color);
     cursor: pointer;
     display: none;
+    background: none;
+    border: none;
+    padding: 0;
+    line-height: 1;
+}
+
+#menu-icon:focus-visible {
+    outline: 2px solid var(--highlight-color);
+    outline-offset: 4px;
+    border-radius: 4px;
 }
 
 /* Responsive Styles */

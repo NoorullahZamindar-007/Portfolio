@@ -20,18 +20,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const lightboxImage = lightbox.querySelector('img');
   const closeButton = lightbox.querySelector('.image-lightbox-close');
+  let lastOpenedImage = null;
 
   const closeLightbox = () => {
     lightbox.classList.remove('active');
     document.body.style.overflow = '';
+    // Return focus to the image that opened the preview.
+    if (lastOpenedImage) {
+      lastOpenedImage.focus();
+      lastOpenedImage = null;
+    }
+  };
+
+  const openLightbox = (image) => {
+    lightboxImage.src = image.src;
+    lightboxImage.alt = image.alt || 'Expanded project preview';
+    lastOpenedImage = image;
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    closeButton.focus();
   };
 
   images.forEach((image) => {
-    image.addEventListener('click', () => {
-      lightboxImage.src = image.src;
-      lightboxImage.alt = image.alt || 'Expanded project preview';
-      lightbox.classList.add('active');
-      document.body.style.overflow = 'hidden';
+    // Clickable preview images must also work for keyboard users.
+    image.setAttribute('tabindex', '0');
+    image.setAttribute('role', 'button');
+    image.setAttribute('aria-label', `Open enlarged view of ${image.alt || 'project image'}`);
+    image.addEventListener('click', () => openLightbox(image));
+    image.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        openLightbox(image);
+      }
     });
   });
 

@@ -266,6 +266,13 @@ a {
   cursor: zoom-in;
 }
 
+/* Keyboard focus ring for images that open the lightbox preview */
+.cover-image img:focus-visible,
+.project-card img:focus-visible {
+  outline: 3px solid #3b82f6;
+  outline-offset: 4px;
+}
+
 .cover-image::after,
 .hero-image::after,
 .project-card::after {

@@ -1,6 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     document.body.classList.add('is-loading');
 
+    // Honor the OS reduced-motion setting: skip the scroll-reveal animations
+    // and show content immediately instead of animating it in.
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
     // Intersection Observer for Active Link Highlighting
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('header nav a');
@@ -52,24 +56,27 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, { threshold: 0.2, rootMargin: '0px 0px -50px 0px' });
 
-    // Animation setup
-    document.querySelectorAll('section:not(#home), [data-animate]').forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        animationObserver.observe(el);
-    });
+    // Animation setup (skipped for reduced-motion users so sections are
+    // readable immediately instead of animating in).
+    if (!prefersReducedMotion) {
+        document.querySelectorAll('section:not(#home), [data-animate]').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            animationObserver.observe(el);
+        });
 
-    document.querySelectorAll('[data-animate-child]').forEach((child, index) => {
-        child.style.opacity = '0';
-        child.style.transform = 'translateY(20px)';
-        child.style.animationDelay = `${index * 0.2}s`;
-        animationObserver.observe(child);
-    });
+        document.querySelectorAll('[data-animate-child]').forEach((child, index) => {
+            child.style.opacity = '0';
+            child.style.transform = 'translateY(20px)';
+            child.style.animationDelay = `${index * 0.2}s`;
+            animationObserver.observe(child);
+        });
+    }
 
     // Third-party CDN libraries may be blocked (ad blockers, offline dev);
     // initialize them only when present so the rest of the UI script keeps working.
     const rotatingRoleEl = document.querySelector('#rotating-role');
-    if (typeof ScrollReveal !== 'undefined') {
+    if (typeof ScrollReveal !== 'undefined' && !prefersReducedMotion) {
         const sr = ScrollReveal({
             reset: false,
             distance: '15px',
@@ -221,27 +228,32 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.classList.remove('is-loading');
     }, 1200);
 
-    // Mobile Menu Toggle
+    // Mobile Menu Toggle (the hamburger is a real <button>, so it works with
+    // keyboard and screen readers; aria-expanded always mirrors the open state).
     const menuIcon = document.querySelector('#menu-icon');
     const navbar = document.querySelector('.navbar');
+    const menuIconGlyph = menuIcon ? menuIcon.querySelector('i') : null;
 
-    menuIcon.onclick = () => {
-        menuIcon.classList.toggle('fa-times');
-        navbar.classList.toggle('active');
+    const setMenuOpen = (open) => {
+        if (navbar) navbar.classList.toggle('active', open);
+        if (menuIconGlyph) menuIconGlyph.classList.toggle('fa-times', open);
+        if (menuIcon) menuIcon.setAttribute('aria-expanded', open ? 'true' : 'false');
     };
 
-    // Close menu when clicking nav links
-    document.querySelectorAll('.navbar a').forEach(navLink => {
-        navLink.addEventListener('click', () => {
-            menuIcon.classList.remove('fa-times');
-            navbar.classList.remove('active');
+    if (menuIcon && navbar) {
+        menuIcon.addEventListener('click', () => {
+            setMenuOpen(!navbar.classList.contains('active'));
         });
-    });
+
+        // Close menu when clicking nav links
+        navbar.querySelectorAll('a').forEach(navLink => {
+            navLink.addEventListener('click', () => setMenuOpen(false));
+        });
+    }
 
     // Close menu on scroll
     window.onscroll = () => {
-        menuIcon.classList.remove('fa-times');
-        navbar.classList.remove('active');
+        setMenuOpen(false);
 
         if (scrollProgress) {
             const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
