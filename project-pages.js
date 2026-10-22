@@ -64,7 +64,9 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') {
+    // Only act when the preview is open; an unconditional close would
+    // clear body overflow and steal a no-op Escape on every page.
+    if (event.key === 'Escape' && lightbox.classList.contains('active')) {
       closeLightbox();
     }
   });
