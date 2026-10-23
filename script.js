@@ -126,6 +126,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const setSkillState = (card, expanded) => {
         const toggle = card.querySelector('.skill-toggle');
+        // A card without its toggle must not throw here and take down
+        // the whole page script (e.g. markup drift in a future edit).
+        if (!toggle) return;
         card.classList.toggle('active', expanded);
         toggle.setAttribute('aria-expanded', expanded ? 'true' : 'false');
 
@@ -136,6 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     skillCards.forEach((card) => {
         const toggle = card.querySelector('.skill-toggle');
+        if (!toggle) return;
 
         toggle.addEventListener('click', () => {
             const isActive = card.classList.contains('active');
@@ -163,6 +167,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const setProjectState = (card, expanded) => {
         const toggle = card.querySelector('.project-toggle');
+        // Same guard as skill cards: a missing toggle must never break
+        // the filter handler, which calls this for every project card.
+        if (!toggle) return;
         card.classList.toggle('active', expanded);
         toggle.setAttribute('aria-expanded', expanded ? 'true' : 'false');
 
@@ -173,6 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     projectCards.forEach((card) => {
         const toggle = card.querySelector('.project-toggle');
+        if (!toggle) return;
 
         toggle.addEventListener('click', () => {
             const isActive = card.classList.contains('active');
