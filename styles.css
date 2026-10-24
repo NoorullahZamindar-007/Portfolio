@@ -13,6 +13,14 @@
     font-family: 'Poppins', sans-serif; /* Default font */
 }
 
+/* Skip smooth scrolling for users who prefer reduced motion so anchor
+   and programmatic scrolls jump instead of animating. */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        scroll-behavior: auto;
+    }
+}
+
 
 
 

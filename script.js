@@ -278,7 +278,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (backToTop) {
         backToTop.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            // Jump instantly for reduced-motion users instead of animating.
+            window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
         });
     }
 
