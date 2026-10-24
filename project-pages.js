@@ -7,6 +7,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const lightbox = document.createElement('div');
   lightbox.className = 'image-lightbox';
+  // Expose the preview as a modal dialog so assistive technologies
+  // announce it correctly and know focus should stay inside it.
+  lightbox.setAttribute('role', 'dialog');
+  lightbox.setAttribute('aria-modal', 'true');
+  lightbox.setAttribute('aria-label', 'Image preview');
   lightbox.innerHTML = `
     <div class="image-lightbox-dialog">
       <button class="image-lightbox-close" type="button" aria-label="Close image preview">
