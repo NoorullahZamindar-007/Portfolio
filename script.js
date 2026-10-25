@@ -12,7 +12,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const scrollProgress = document.querySelector('#scroll-progress');
     const backToTop = document.querySelector('#back-to-top');
     const themeToggle = document.querySelector('#theme-toggle');
-    const storedTheme = localStorage.getItem('portfolio-theme');
+    // localStorage throws in browsers with storage blocked (e.g. some
+    // private modes); a theme read must never break the whole page script.
+    let storedTheme = null;
+    try {
+        storedTheme = localStorage.getItem('portfolio-theme');
+    } catch (e) {
+        storedTheme = null;
+    }
 
     if (storedTheme === 'light') {
         document.body.classList.add('light-theme');
@@ -286,7 +293,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (themeToggle) {
         themeToggle.addEventListener('click', () => {
             const isLight = document.body.classList.toggle('light-theme');
-            localStorage.setItem('portfolio-theme', isLight ? 'light' : 'dark');
+            try {
+                localStorage.setItem('portfolio-theme', isLight ? 'light' : 'dark');
+            } catch (e) {
+                // Storage blocked: the theme still toggles for this visit,
+                // it just won't persist to the next one.
+            }
             themeToggle.innerHTML = isLight
                 ? '<i class="fa-solid fa-moon"></i>'
                 : '<i class="fa-solid fa-sun"></i>';
