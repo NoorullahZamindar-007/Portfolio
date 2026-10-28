@@ -592,3 +592,23 @@ a {
     width: 100%;
   }
 }
+
+/* Keyboard-only "skip to content" link: invisible until focused, so it
+   never changes the visual layout but lets keyboard and screen-reader
+   users jump past the header navigation. Targets carry tabindex="-1"
+   so focus can actually land on the section. */
+.skip-link {
+    background: var(--accent, #b78eea);
+    color: #fff;
+    position: absolute;
+    left: 1.6rem;
+    top: -100%;
+    z-index: 2000;
+    padding: 1rem 1.6rem;
+    border-radius: 0.8rem;
+    font-size: 1.6rem;
+    text-decoration: none;
+}
+.skip-link:focus {
+    top: 1.6rem;
+}
