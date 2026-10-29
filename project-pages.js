@@ -71,8 +71,32 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('keydown', (event) => {
     // Only act when the preview is open; an unconditional close would
     // clear body overflow and steal a no-op Escape on every page.
-    if (event.key === 'Escape' && lightbox.classList.contains('active')) {
+    if (!lightbox.classList.contains('active')) {
+      return;
+    }
+    if (event.key === 'Escape') {
       closeLightbox();
+      return;
+    }
+    // aria-modal promises focus stays inside, but only the close button
+    // is focusable: without a Tab trap, focus would wander to the page
+    // behind the open dialog. Wrap it around the dialog's focusables.
+    if (event.key === 'Tab') {
+      const focusables = Array.from(
+        lightbox.querySelectorAll('button, a[href], [tabindex]:not([tabindex="-1"])')
+      ).filter((el) => !el.hasAttribute('disabled'));
+      if (!focusables.length) {
+        return;
+      }
+      const first = focusables[0];
+      const last = focusables[focusables.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
     }
   });
 });
