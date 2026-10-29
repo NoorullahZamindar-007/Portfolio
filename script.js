@@ -266,8 +266,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Close menu on scroll
-    window.onscroll = () => {
+    // Close menu on scroll. addEventListener (not window.onscroll) so
+    // this handler composes with any other scroll listener instead of
+    // silently replacing it — or being replaced by it.
+    const handleScroll = () => {
         setMenuOpen(false);
 
         if (scrollProgress) {
@@ -282,6 +284,8 @@ document.addEventListener('DOMContentLoaded', () => {
             backToTop.classList.toggle('visible', scrollTop > 600);
         }
     };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
 
     if (backToTop) {
         backToTop.addEventListener('click', () => {
@@ -305,5 +309,5 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    window.onscroll();
+    handleScroll();
 });
