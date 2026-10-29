@@ -28,8 +28,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Without IntersectionObserver (old browsers, some embedded views)
+    // constructing one throws and aborts the rest of this handler, so
+    // the theme toggle, menu and other listeners below would never
+    // attach. Guard it and leave content visible instead.
+    const supportsIntersectionObserver = typeof IntersectionObserver !== 'undefined';
+
     // Nav Observer
-    const navObserver = new IntersectionObserver((entries) => {
+    const navObserver = supportsIntersectionObserver ? new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 navLinks.forEach(link => link.classList.remove('active'));
@@ -38,12 +44,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (activeLink) activeLink.classList.add('active');
             }
         });
-    }, { threshold: 0.5 });
+    }, { threshold: 0.5 }) : null;
 
-    sections.forEach(section => navObserver.observe(section));
+    if (navObserver) {
+        sections.forEach(section => navObserver.observe(section));
+    }
 
     // Animation Observer
-    const animationObserver = new IntersectionObserver((entries) => {
+    const animationObserver = supportsIntersectionObserver ? new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if(entry.isIntersecting) {
                 const element = entry.target;
@@ -61,11 +69,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 animationObserver.unobserve(element);
             }
         });
-    }, { threshold: 0.2, rootMargin: '0px 0px -50px 0px' });
+    }, { threshold: 0.2, rootMargin: '0px 0px -50px 0px' }) : null;
 
     // Animation setup (skipped for reduced-motion users so sections are
-    // readable immediately instead of animating in).
-    if (!prefersReducedMotion) {
+    // readable immediately instead of animating in). Also skipped when
+    // there is no observer: elements are never hidden, so content stays
+    // visible instead of being stuck at opacity 0.
+    if (!prefersReducedMotion && animationObserver) {
         document.querySelectorAll('section:not(#home), [data-animate]').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(20px)';
