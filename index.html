@@ -23,8 +23,11 @@
     referrerpolicy="no-referrer"
   />
   <link rel="stylesheet" href="styles.css" />
-  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-  <script src="https://unpkg.com/scrollreveal"></script>
+  <!-- defer: these are render-blocking in <head> otherwise, and script.js
+       only uses them inside its DOMContentLoaded handler, which deferred
+       scripts always run before, in document order. -->
+  <script defer src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+  <script defer src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
   <a class="skip-link" href="#home">Skip to main content</a>

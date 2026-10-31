@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (typeof Typed !== 'undefined' && rotatingRoleEl) {
-        const typed = new Typed('#rotating-role', {
+        new Typed('#rotating-role', {
             strings: [
                 "AI Engineer",
                 "Data Scientist",

@@ -2151,3 +2151,15 @@ section {
 .skip-link:focus {
     top: 1.6rem;
 }
+
+/* Reduced motion: the JS already skips scroll-reveal animations for these
+   users, but CSS-only animations (loader mark, pulsing badge dot,
+   rotating rings) would still animate. Neutralise them too. */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
