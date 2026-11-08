@@ -81,6 +81,19 @@ body.is-loading {
     background: rgba(24, 9, 42, 0.96);
     z-index: 1000;
     transition: opacity 0.45s ease, visibility 0.45s ease;
+    /* Backstop for a failed or blocked script.js: the loader is only
+       hidden when JS adds .hidden, so without this a script failure
+       would leave the whole page covered forever. JS hides it sooner
+       (1.2 s timeout), so this only fires when JS never runs. */
+    animation: loaderFallback 0.6s ease 4s forwards;
+}
+
+@keyframes loaderFallback {
+    to {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
 }
 
 .page-loader.hidden {

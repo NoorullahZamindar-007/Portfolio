@@ -28,6 +28,9 @@
        scripts always run before, in document order. -->
   <script defer src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
   <script defer src="https://unpkg.com/scrollreveal"></script>
+  <!-- No-JS fallback: the loader is only hidden by script.js, so without
+       JavaScript it would cover the page forever. -->
+  <noscript><style>.page-loader{display:none!important}</style></noscript>
 </head>
 <body>
   <a class="skip-link" href="#home">Skip to main content</a>
