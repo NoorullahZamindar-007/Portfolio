@@ -216,8 +216,14 @@ document.addEventListener('DOMContentLoaded', () => {
         filter.addEventListener('click', () => {
             const selected = filter.dataset.projectFilter;
 
-            projectFilters.forEach((item) => item.classList.remove('active'));
+            // Mirror the visual active state in aria-pressed so screen
+            // reader users know which filter is selected.
+            projectFilters.forEach((item) => {
+                item.classList.remove('active');
+                item.setAttribute('aria-pressed', 'false');
+            });
             filter.classList.add('active');
+            filter.setAttribute('aria-pressed', 'true');
 
             let firstVisibleProject = null;
 
