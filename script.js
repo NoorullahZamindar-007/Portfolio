@@ -129,6 +129,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const skillCards = document.querySelectorAll('[data-skill-card]');
     const projectCards = document.querySelectorAll('[data-project-card]');
     const projectFilters = document.querySelectorAll('[data-project-filter]');
+    // Shown when a filter matches no project card, so the grid never
+    // blanks silently (the Training filter used to do exactly that:
+    // the button existed but no card carried the training category).
+    const projectsEmptyMessage = document.querySelector('[data-projects-empty]');
 
     const animateSkillTags = (card) => {
         const tags = card.querySelectorAll('.skill-tags span');
@@ -241,6 +245,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (firstVisibleProject) {
                 setProjectState(firstVisibleProject, true);
+            }
+
+            // A filter with no matching project must say so instead of
+            // leaving an empty grid that looks broken.
+            if (projectsEmptyMessage) {
+                projectsEmptyMessage.hidden = Boolean(firstVisibleProject);
             }
         });
     });

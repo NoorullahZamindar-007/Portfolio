@@ -1448,6 +1448,13 @@ span{
   display: none;
 }
 
+.projects-empty {
+  text-align: center;
+  font-size: 1.6rem;
+  color: rgba(238, 238, 238, 0.8);
+  margin: 2rem 0;
+}
+
 @keyframes projectTagReveal {
   from {
     opacity: 0;
