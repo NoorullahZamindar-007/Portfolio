@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Traffic Sign Classifier — live demo by Noorullah Zamindar</title>
+<style>
+  :root { --accent: #2563eb; --bg: #f8fafc; --card: #ffffff; --text: #0f172a; --muted: #64748b; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.5; }
+  main { max-width: 640px; margin: 0 auto; padding: 24px 16px 48px; }
+  h1 { font-size: 1.5rem; margin: 0 0 4px; }
+  .sub { color: var(--muted); margin: 0 0 20px; }
+  .card { background: var(--card); border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; margin-bottom: 16px; }
+  #dropzone { border: 2px dashed #cbd5e1; border-radius: 10px; padding: 28px 16px; text-align: center; color: var(--muted); cursor: pointer; }
+  #dropzone:hover, #dropzone.dragover { border-color: var(--accent); color: var(--accent); }
+  #dropzone input { display: none; }
+  .samples { display: flex; gap: 12px; margin-top: 16px; flex-wrap: wrap; }
+  .samples figure { margin: 0; text-align: center; cursor: pointer; }
+  .samples img { width: 72px; height: 72px; object-fit: contain; image-rendering: pixelated; border: 2px solid #e2e8f0; border-radius: 8px; background: #fff; }
+  .samples figure:hover img, .samples figure.selected img { border-color: var(--accent); }
+  .samples figcaption { font-size: 0.8rem; color: var(--muted); margin-top: 4px; }
+  #preview-wrap { text-align: center; margin-top: 16px; display: none; }
+  #preview { max-width: 220px; max-height: 220px; image-rendering: pixelated; border: 1px solid #e2e8f0; border-radius: 8px; background: #fff; }
+  button { background: var(--accent); color: #fff; border: none; border-radius: 8px; padding: 12px 20px; font-size: 1rem; cursor: pointer; width: 100%; margin-top: 16px; }
+  button:disabled { background: #94a3b8; cursor: wait; }
+  #status { text-align: center; color: var(--muted); font-size: 0.9rem; margin-top: 12px; min-height: 1.4em; }
+  .result { display: none; }
+  .row { margin: 10px 0; }
+  .row .label { display: flex; justify-content: space-between; font-weight: 600; }
+  .bar { height: 10px; background: #e2e8f0; border-radius: 5px; overflow: hidden; margin-top: 4px; }
+  .bar > div { height: 100%; background: var(--accent); border-radius: 5px; }
+  .row.top .label { color: var(--accent); }
+  .links { font-size: 0.9rem; color: var(--muted); }
+  .links a { color: var(--accent); }
+  footer { font-size: 0.85rem; color: var(--muted); text-align: center; margin-top: 8px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>🚦 Traffic Sign Classifier</h1>
+  <p class="sub">Live demo by Noorullah Zamindar — a CNN trained on the German Traffic Sign Recognition Benchmark (GTSRB, 39,209 images, 43 classes). Validation accuracy 0.9719. Runs entirely in your browser: your photo never leaves your device.</p>
+
+  <div class="card">
+    <div id="dropzone">
+      <input type="file" id="file-input" accept="image/*">
+      <strong>Tap to upload a traffic sign photo</strong><br>
+      or drag &amp; drop it here
+    </div>
+    <div class="samples">
+      <figure data-sample="samples/stop.png"><img src="samples/stop.png" alt="Stop sign"><figcaption>Stop</figcaption></figure>
+      <figure data-sample="samples/speed-limit-30.png"><img src="samples/speed-limit-30.png" alt="Speed limit 30 km/h sign"><figcaption>Speed limit 30</figcaption></figure>
+      <figure data-sample="samples/keep-right.png"><img src="samples/keep-right.png" alt="Keep right sign"><figcaption>Keep right</figcaption></figure>
+    </div>
+    <p style="text-align:center;color:var(--muted);font-size:0.85rem;margin:12px 0 0;">…or try a sample above with one tap</p>
+    <div id="preview-wrap"><img id="preview" alt="Selected traffic sign"></div>
+    <button id="predict-btn" disabled>Loading model…</button>
+    <p id="status">Loading the model (about 12 MB, once)…</p>
+  </div>
+
+  <div class="card result" id="results">
+    <h2 style="font-size:1.1rem;margin:0 0 8px;">Top 3 predictions</h2>
+    <div id="results-body"></div>
+  </div>
+
+  <div class="card links">
+    <strong>Model:</strong> <a href="https://huggingface.co/Noor-Khan/traffic-sign-classification" target="_blank" rel="noopener">Noor-Khan/traffic-sign-classification</a> on Hugging Face<br>
+    <strong>Eval data:</strong> <a href="https://huggingface.co/datasets/Noor-Khan/traffic-sign-eval-split" target="_blank" rel="noopener">Noor-Khan/traffic-sign-eval-split</a> — 7,841 labelled images, 43 classes<br>
+    <strong>Code:</strong> <a href="https://github.com/NoorullahZamindar-007/Traffic-Sign-Classification" target="_blank" rel="noopener">Traffic-Sign-Classification</a> on GitHub
+  </div>
+
+  <footer>Signs are German (GTSRB). The model is small and fast, but it is a demo — do not use it for safety-critical decisions.</footer>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+<script src="app.js"></script>
+</body>
+</html>
