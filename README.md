@@ -9,7 +9,7 @@ Built as a single-page site with a dedicated projects library.
 
 - **Hero** — animated intro with rotating role titles, availability badge, and contact links
 - **Specializations & Services** — AI agents, workflow automation, applied ML, training
-- **Experience timeline** — UNDP, AMHTC, Ghazi Amanullah Khan University, io Global Services, freelance delivery
+- **Experience timeline** — Founder of ARK AI, Islamic Relief, UNDP, AMHTC, Ghazi Amanullah Khan University, io Global Services, freelance delivery
 - **Education** — Rana University (Software Engineering), Alagappa University (BBA, in progress), Storai Institute (English diploma)
 - **Skills** — expandable cards covering Python/data, ML/AI, automation, frameworks, and training
 - **Featured projects** — filterable project cards (AI, automation, data, web, training) with tech tags and GitHub links
