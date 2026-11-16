@@ -102,8 +102,10 @@ Notes:
   from the relative path `./tfjs_model/model.json`, so the page must
   be served from the folder root (works on GitHub Pages as-is).
 - The TF.js library loads from the jsDelivr CDN
-  (`cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest`) — the page needs
-  internet for that script, but inference itself runs locally.
+  (`cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.22.0`) — pinned to the
+  converter version that built the model, not `@latest`, so a future
+  major release cannot break the demo. The page needs internet for
+  that script, but inference itself runs locally.
 - After publishing, link it from the Hugging Face model card
   (`Noor-Khan/traffic-sign-classification`) and from the eval dataset
   card, so visitors find the live demo.

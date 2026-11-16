@@ -28,6 +28,7 @@ const IMAGE_SIZE = 50;
 
 let model = null;
 let currentImage = null; // HTMLImageElement
+let currentObjectUrl = null; // blob URL for the current upload, if any
 
 const statusEl = document.getElementById("status");
 const predictBtn = document.getElementById("predict-btn");
@@ -70,10 +71,23 @@ function loadFromFile(file) {
     setStatus("Please choose an image file.");
     return;
   }
+  // Free the previous upload's blob URL: createObjectURL holds the file
+  // in memory until revoked, so every upload used to leak one.
+  if (currentObjectUrl) {
+    URL.revokeObjectURL(currentObjectUrl);
+    currentObjectUrl = null;
+  }
   const img = new Image();
   img.onload = () => showImage(img, "Photo ready — tap “Classify this sign”.");
-  img.onerror = () => setStatus("Could not read that image. Try another file.");
-  img.src = URL.createObjectURL(file);
+  img.onerror = () => {
+    if (currentObjectUrl) {
+      URL.revokeObjectURL(currentObjectUrl);
+      currentObjectUrl = null;
+    }
+    setStatus("Could not read that image. Try another file.");
+  };
+  currentObjectUrl = URL.createObjectURL(file);
+  img.src = currentObjectUrl;
 }
 
 function loadFromUrl(url, label) {
@@ -123,7 +137,19 @@ function predict() {
 }
 
 dropzone.addEventListener("click", () => fileInput.click());
-fileInput.addEventListener("change", (e) => loadFromFile(e.target.files[0]));
+// The dropzone is a focusable button now: Enter/Space must open the
+// file picker too, or keyboard users cannot upload at all.
+dropzone.addEventListener("keydown", (e) => {
+  if (e.key === "Enter" || e.key === " ") {
+    e.preventDefault();
+    fileInput.click();
+  }
+});
+fileInput.addEventListener("change", (e) => {
+  loadFromFile(e.target.files[0]);
+  // Reset so picking the same file again still fires a change event.
+  e.target.value = "";
+});
 dropzone.addEventListener("dragover", (e) => { e.preventDefault(); dropzone.classList.add("dragover"); });
 dropzone.addEventListener("dragleave", () => dropzone.classList.remove("dragover"));
 dropzone.addEventListener("drop", (e) => {
@@ -132,10 +158,19 @@ dropzone.addEventListener("drop", (e) => {
   loadFromFile(e.dataTransfer.files[0]);
 });
 document.querySelectorAll(".samples figure").forEach((fig) => {
-  fig.addEventListener("click", () => {
+  const selectSample = () => {
     document.querySelectorAll(".samples figure").forEach((f) => f.classList.remove("selected"));
     fig.classList.add("selected");
     loadFromUrl(fig.dataset.sample, "Sample loaded — tap “Classify this sign”.");
+  };
+  fig.addEventListener("click", selectSample);
+  // Sample figures are focusable buttons: Enter/Space must select them
+  // too, or keyboard users cannot try a sample at all.
+  fig.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      selectSample();
+    }
   });
 });
 predictBtn.addEventListener("click", predict);
