@@ -15,6 +15,7 @@ Built as a single-page site with a dedicated projects library.
 - **Featured projects** — filterable project cards (AI, automation, data, web, training) with tech tags and GitHub links
 - **GitHub activity, certifications, proof & client highlights, contact** sections
 - **Dedicated project pages** (`projects.html` + `projects/`) — one page per featured project
+- **Live traffic-sign demo** (`traffic-sign-demo/`) — the traffic-sign CNN running in the browser with TensorFlow.js: upload a photo or try a sample, no server needed ([live demo](https://noorullahzamindar-007.github.io/Portfolio/traffic-sign-demo/))
 - Dark/light theme toggle, page loader, scroll progress bar, back-to-top button, scroll-reveal animations, responsive mobile menu
 
 ## Tech stack
@@ -31,6 +32,11 @@ Built as a single-page site with a dedicated projects library.
 ├── index.html          # Main single-page portfolio
 ├── projects.html       # Project library overview
 ├── projects/           # One dedicated page per featured project
+├── traffic-sign-demo/  # In-browser traffic-sign classifier (TF.js, GTSRB, 43 classes)
+│   ├── index.html      # Demo page (upload / samples / top-3 predictions)
+│   ├── app.js          # Upload, sample and predict logic
+│   ├── tfjs_model/     # Converted model (model.json + weights)
+│   └── samples/        # Three sample sign photos
 ├── images/             # Profile photos, certificate badges, project SVGs
 ├── styles.css          # Main stylesheet
 ├── project-pages.css   # Styles for projects.html and project detail pages
