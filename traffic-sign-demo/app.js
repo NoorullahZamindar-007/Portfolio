@@ -29,6 +29,14 @@ const IMAGE_SIZE = 50;
 let model = null;
 let currentImage = null; // HTMLImageElement
 let currentObjectUrl = null; // blob URL for the current upload, if any
+// Increments on every load request: a slow image that finishes after a
+// newer one was picked must not overwrite the newer selection. Picking
+// file A then quickly file B used to show A if A's decode finished last.
+let loadToken = 0;
+
+// Phone photos can be tens of megabytes; decoding one fully just to
+// downscale it to 50x50 wastes memory and can stall a mobile browser.
+const MAX_UPLOAD_BYTES = 10 * 1024 * 1024;
 
 const statusEl = document.getElementById("status");
 const predictBtn = document.getElementById("predict-btn");
@@ -71,15 +79,24 @@ function loadFromFile(file) {
     setStatus("Please choose an image file.");
     return;
   }
+  if (file.size > MAX_UPLOAD_BYTES) {
+    setStatus("That photo is too large (" + (file.size / 1024 / 1024).toFixed(1) + " MB). Please choose one under 10 MB.");
+    return;
+  }
   // Free the previous upload's blob URL: createObjectURL holds the file
   // in memory until revoked, so every upload used to leak one.
   if (currentObjectUrl) {
     URL.revokeObjectURL(currentObjectUrl);
     currentObjectUrl = null;
   }
+  const token = ++loadToken;
   const img = new Image();
-  img.onload = () => showImage(img, "Photo ready — tap “Classify this sign”.");
+  img.onload = () => {
+    if (token !== loadToken) return; // a newer image was picked meanwhile
+    showImage(img, "Photo ready — tap “Classify this sign”.");
+  };
   img.onerror = () => {
+    if (token !== loadToken) return;
     if (currentObjectUrl) {
       URL.revokeObjectURL(currentObjectUrl);
       currentObjectUrl = null;
@@ -91,9 +108,22 @@ function loadFromFile(file) {
 }
 
 function loadFromUrl(url, label) {
+  // A sample replaces the uploaded photo, so free its blob URL now
+  // instead of leaving it in memory until the next upload.
+  if (currentObjectUrl) {
+    URL.revokeObjectURL(currentObjectUrl);
+    currentObjectUrl = null;
+  }
+  const token = ++loadToken;
   const img = new Image();
-  img.onload = () => showImage(img, label || "Sample loaded — tap “Classify this sign”.");
-  img.onerror = () => setStatus("Could not load the sample image. Try uploading your own.");
+  img.onload = () => {
+    if (token !== loadToken) return; // a newer sample was picked meanwhile
+    showImage(img, label || "Sample loaded — tap “Classify this sign”.");
+  };
+  img.onerror = () => {
+    if (token !== loadToken) return;
+    setStatus("Could not load the sample image. Try uploading your own.");
+  };
   img.src = url;
 }
 
