@@ -74,6 +74,17 @@ function showImage(img, label) {
   setStatus(label || "Photo ready — tap “Classify this sign”.");
 }
 
+function clearImage() {
+  // A failed load must not leave the previous photo on screen: the
+  // status says the new image could not be read, but the old preview
+  // would still be there and "Classify this sign" would answer for
+  // the old photo, not the one the user just picked.
+  currentImage = null;
+  previewWrap.style.display = "none";
+  resultsCard.style.display = "none";
+  predictBtn.disabled = true;
+}
+
 function loadFromFile(file) {
   if (!file || !file.type.startsWith("image/")) {
     setStatus("Please choose an image file.");
@@ -101,6 +112,7 @@ function loadFromFile(file) {
       URL.revokeObjectURL(currentObjectUrl);
       currentObjectUrl = null;
     }
+    clearImage();
     setStatus("Could not read that image. Try another file.");
   };
   currentObjectUrl = URL.createObjectURL(file);
@@ -122,6 +134,8 @@ function loadFromUrl(url, label) {
   };
   img.onerror = () => {
     if (token !== loadToken) return;
+    document.querySelectorAll(".samples figure").forEach((f) => f.classList.remove("selected"));
+    clearImage();
     setStatus("Could not load the sample image. Try uploading your own.");
   };
   img.src = url;
