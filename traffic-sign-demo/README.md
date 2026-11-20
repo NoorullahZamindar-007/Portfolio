@@ -37,8 +37,9 @@ optimizer state; the TF.js weights alone are 4.1 MB).
    refuses to load the model otherwise ("An InputLayer should be passed
    either a `batchInputShape` or an `inputShape`"). Both were normalized
    mechanically in `model.json`; nothing else was changed.
-3. Build tooling lives in `../hidden_files/tfjs-build/` (converter
-   packages, SavedModel + `.h5` intermediates, Node headless test).
+3. Build tooling (converter packages, SavedModel + `.h5` intermediates,
+   Node headless test) lives outside this repo, in the author's workspace
+   — it was never committed here, so there is no build folder to run.
 
 ### Conversion warnings — honest notes
 
@@ -58,7 +59,7 @@ optimizer state; the TF.js weights alone are 4.1 MB).
   `tensorflow_hub`, and a patched optional `jax` import in the
   converter — all three are only imported for conversion paths this
   model never uses. `/tmp` is a 512 MB tmpfs (90% full) — the build
-  was moved to `hidden_files/tfjs-build/` on the main disk.
+  was moved to a folder on the main disk instead.
 
 ## Verification (all done 14 Nov 2026)
 
@@ -80,21 +81,12 @@ optimizer state; the TF.js weights alone are 4.1 MB).
 
 ## Publishing (GitHub Pages, free)
 
-The Portfolio repo already has GitHub Pages live at
-`https://noorullahzamindar-007.github.io/Portfolio/`, so no setup is
-needed — just push this folder into it:
-
-```bash
-# from a clone of NoorullahZamindar-007/Portfolio
-cp -r traffic-sign-static-demo traffic-sign-demo
-git add traffic-sign-demo
-git commit -m "Add in-browser traffic-sign classifier demo (TF.js)"
-git push origin main
-```
-
-Live URL after the push:
+The demo is already live — no setup or copy step is needed:
 
 **https://noorullahzamindar-007.github.io/Portfolio/traffic-sign-demo/**
+
+It ships with the Portfolio repo, which has GitHub Pages enabled: any
+change pushed to this folder goes live with the next Pages deploy.
 
 Notes:
 

@@ -12,7 +12,7 @@ Built as a single-page site with a dedicated projects library.
 - **Experience timeline** — Founder of ARK AI, Islamic Relief, UNDP, AMHTC, Ghazi Amanullah Khan University, io Global Services, freelance delivery
 - **Education** — Rana University (Software Engineering), Alagappa University (BBA, in progress), Storai Institute (English diploma)
 - **Skills** — expandable cards covering Python/data, ML/AI, automation, frameworks, and training
-- **Featured projects** — filterable project cards (AI, automation, data, web, training) with tech tags and GitHub links
+- **Featured projects** — filterable project cards (AI, automation, data, web) with tech tags and GitHub links
 - **GitHub activity, certifications, proof & client highlights, contact** sections
 - **Dedicated project pages** (`projects.html` + `projects/`) — one page per featured project
 - **Live traffic-sign demo** (`traffic-sign-demo/`) — the traffic-sign CNN running in the browser with TensorFlow.js: upload a photo or try a sample, no server needed ([live demo](https://noorullahzamindar-007.github.io/Portfolio/traffic-sign-demo/))
