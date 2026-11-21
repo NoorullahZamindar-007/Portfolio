@@ -10,8 +10,8 @@ Hugging Face PRO needed. Uploaded photos never leave the device.
 
 | File | Size | What it is |
 |---|---|---|
-| `index.html` | 5.6 KB | Demo page (mobile-friendly) |
-| `app.js` | 8.1 KB | Upload / sample / predict logic, top-3 with confidences |
+| `index.html` | 6.4 KB | Demo page (mobile-friendly) |
+| `app.js` | 8.4 KB | Upload / sample / predict logic, top-3 with confidences |
 | `tfjs_model/model.json` | 10 KB | Converted model topology + weight manifest |
 | `tfjs_model/group1-shard1of1.bin` | 4.1 MB | Model weights (float32, ~1M params) |
 | `samples/stop.png` | 4.4 KB | Sample: Stop sign (GTSRB class 14) |
