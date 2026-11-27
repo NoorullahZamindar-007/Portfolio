@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760">
+  <rect width="1200" height="760" fill="#140822"/>
+  <circle cx="920" cy="160" r="180" fill="#56c2ff" opacity=".12"/>
+  <circle cx="180" cy="620" r="170" fill="#b78eea" opacity=".14"/>
+  <rect x="120" y="120" width="960" height="520" rx="36" fill="#231338" stroke="#b78eea" stroke-opacity=".3"/>
+  <g stroke="#73dcff" stroke-width="3" opacity=".55">
+    <line x1="250" y1="250" x2="330" y2="330"/>
+    <line x1="330" y1="330" x2="250" y2="410"/>
+    <line x1="330" y1="330" x2="410" y2="250"/>
+    <line x1="330" y1="330" x2="410" y2="410"/>
+  </g>
+  <g fill="#73dcff">
+    <circle cx="250" cy="250" r="16"/>
+    <circle cx="250" cy="410" r="16"/>
+    <circle cx="410" cy="250" r="16"/>
+    <circle cx="410" cy="410" r="16"/>
+  </g>
+  <circle cx="330" cy="330" r="26" fill="#b78eea"/>
+  <text x="480" y="250" fill="#73dcff" font-size="28" font-family="Arial, sans-serif" letter-spacing="4">LANGUAGE MODEL</text>
+  <text x="480" y="350" fill="#ffffff" font-size="66" font-weight="700" font-family="Arial, sans-serif">Noor Nano v1.0</text>
+  <text x="480" y="418" fill="#ffffff" font-size="66" font-weight="700" font-family="Arial, sans-serif">From Scratch</text>
+  <text x="480" y="490" fill="#efe8f8" font-size="26" font-family="Arial, sans-serif">10M-parameter causal LM, built and trained locally</text>
+</svg>
